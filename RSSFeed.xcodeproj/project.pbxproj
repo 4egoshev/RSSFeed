@@ -13,6 +13,14 @@
 		23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D8075C2202A01A008F6F39 /* Assets.xcassets */; };
 		23D807602202A01A008F6F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D8075E2202A01A008F6F39 /* LaunchScreen.storyboard */; };
 		23D807632202A01A008F6F39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807622202A01A008F6F39 /* main.m */; };
+		23D8076C2202A2F0008F6F39 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D8076A2202A2F0008F6F39 /* FeedViewController.m */; };
+		23D8076D2202A2F0008F6F39 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D8076B2202A2F0008F6F39 /* FeedViewController.xib */; };
+		23D8077A2202A611008F6F39 /* FeedViewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807792202A611008F6F39 /* FeedViewController+TableView.m */; };
+		23D807832202D318008F6F39 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807812202D318008F6F39 /* NewsCell.m */; };
+		23D807842202D318008F6F39 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D807822202D318008F6F39 /* NewsCell.xib */; };
+		23D807892202D566008F6F39 /* UITableView+registerNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807882202D566008F6F39 /* UITableView+registerNib.m */; };
+		23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D8078D2202D977008F6F39 /* ScreenManager.m */; };
+		23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807912202DAD0008F6F39 /* ScreenFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,20 @@
 		23D8075F2202A01A008F6F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23D807612202A01A008F6F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D807622202A01A008F6F39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23D807692202A2F0008F6F39 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		23D8076A2202A2F0008F6F39 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		23D8076B2202A2F0008F6F39 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		23D807782202A611008F6F39 /* FeedViewController+TableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedViewController+TableView.h"; sourceTree = "<group>"; };
+		23D807792202A611008F6F39 /* FeedViewController+TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FeedViewController+TableView.m"; sourceTree = "<group>"; };
+		23D807802202D318008F6F39 /* NewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		23D807812202D318008F6F39 /* NewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		23D807822202D318008F6F39 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		23D807872202D566008F6F39 /* UITableView+registerNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+registerNib.h"; sourceTree = "<group>"; };
+		23D807882202D566008F6F39 /* UITableView+registerNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+registerNib.m"; sourceTree = "<group>"; };
+		23D8078C2202D977008F6F39 /* ScreenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenManager.h; sourceTree = "<group>"; };
+		23D8078D2202D977008F6F39 /* ScreenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenManager.m; sourceTree = "<group>"; };
+		23D807902202DAD0008F6F39 /* ScreenFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenFactory.h; sourceTree = "<group>"; };
+		23D807912202DAD0008F6F39 /* ScreenFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +82,8 @@
 			children = (
 				23D807532202A01A008F6F39 /* AppDelegate.h */,
 				23D807542202A01A008F6F39 /* AppDelegate.m */,
-				23D807562202A01A008F6F39 /* ViewController.h */,
-				23D807572202A01A008F6F39 /* ViewController.m */,
+				23D8078B2202D88D008F6F39 /* Utils */,
+				23D8076E2202A2F8008F6F39 /* Controllers */,
 				23D807592202A01A008F6F39 /* Main.storyboard */,
 				23D8075C2202A01A008F6F39 /* Assets.xcassets */,
 				23D8075E2202A01A008F6F39 /* LaunchScreen.storyboard */,
@@ -69,6 +91,84 @@
 				23D807622202A01A008F6F39 /* main.m */,
 			);
 			path = RSSFeed;
+			sourceTree = "<group>";
+		};
+		23D8076E2202A2F8008F6F39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23D8077C2202A763008F6F39 /* Root */,
+				23D8076F2202A400008F6F39 /* Feed */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23D8076F2202A400008F6F39 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				23D8077B2202A6FE008F6F39 /* Protocols */,
+				23D807692202A2F0008F6F39 /* FeedViewController.h */,
+				23D8076A2202A2F0008F6F39 /* FeedViewController.m */,
+				23D8076B2202A2F0008F6F39 /* FeedViewController.xib */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		23D8077B2202A6FE008F6F39 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				23D807852202D31E008F6F39 /* Cell */,
+				23D807782202A611008F6F39 /* FeedViewController+TableView.h */,
+				23D807792202A611008F6F39 /* FeedViewController+TableView.m */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		23D8077C2202A763008F6F39 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				23D807562202A01A008F6F39 /* ViewController.h */,
+				23D807572202A01A008F6F39 /* ViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		23D807852202D31E008F6F39 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23D807802202D318008F6F39 /* NewsCell.h */,
+				23D807812202D318008F6F39 /* NewsCell.m */,
+				23D807822202D318008F6F39 /* NewsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		23D8078A2202D722008F6F39 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				23D807872202D566008F6F39 /* UITableView+registerNib.h */,
+				23D807882202D566008F6F39 /* UITableView+registerNib.m */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		23D8078B2202D88D008F6F39 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				23D8078F2202D97E008F6F39 /* Screen */,
+				23D8078A2202D722008F6F39 /* Extentions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		23D8078F2202D97E008F6F39 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				23D807902202DAD0008F6F39 /* ScreenFactory.h */,
+				23D807912202DAD0008F6F39 /* ScreenFactory.m */,
+				23D8078C2202D977008F6F39 /* ScreenManager.h */,
+				23D8078D2202D977008F6F39 /* ScreenManager.m */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +230,8 @@
 			files = (
 				23D807602202A01A008F6F39 /* LaunchScreen.storyboard in Resources */,
 				23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */,
+				23D807842202D318008F6F39 /* NewsCell.xib in Resources */,
+				23D8076D2202A2F0008F6F39 /* FeedViewController.xib in Resources */,
 				23D8075B2202A01A008F6F39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +243,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D807892202D566008F6F39 /* UITableView+registerNib.m in Sources */,
 				23D807582202A01A008F6F39 /* ViewController.m in Sources */,
+				23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */,
+				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
 				23D807632202A01A008F6F39 /* main.m in Sources */,
+				23D807832202D318008F6F39 /* NewsCell.m in Sources */,
+				23D8076C2202A2F0008F6F39 /* FeedViewController.m in Sources */,
 				23D807552202A01A008F6F39 /* AppDelegate.m in Sources */,
+				23D8077A2202A611008F6F39 /* FeedViewController+TableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
