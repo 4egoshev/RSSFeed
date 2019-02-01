@@ -10,6 +10,7 @@
 #import "UITableView+registerNib.h"
 
 #import "NewsCell.h"
+#import "News.h"
 
 
 @implementation FeedViewController (TableView)
@@ -27,12 +28,12 @@
 @implementation FeedViewController (TableViewDataSource)
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return self.newsArray.count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithClass:[NewsCell class] forIndexPath:indexPath];
-    //cell.backgroundColor = [UIColor redColor];
+    cell.textLabel.text = self.newsArray[indexPath.row].title;
     return cell;
 }
 

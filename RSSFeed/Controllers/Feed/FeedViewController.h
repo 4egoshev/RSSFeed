@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class ViewController;
+@class News;
 
 @interface FeedViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) NSArray *newsArray;
+@property (strong, nonatomic) NSXMLParser *parser;
+
+@property (strong, nonatomic) NSArray<News *> *newsArray;
 
 @end

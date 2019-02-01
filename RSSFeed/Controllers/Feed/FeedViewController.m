@@ -8,8 +8,9 @@
 
 #import "FeedViewController.h"
 #import "FeedViewController+TableView.h"
+#import "XMLParseManager.h"
 
-@interface FeedViewController ()
+@interface FeedViewController () <XMLParseManagerDelegate>
 
 @end
 
@@ -18,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
+    XMLParseManager *parser = [XMLParseManager manager];
+    [parser setDelegate:self];
+    [parser setupParser];
+}
+
+- (void)updateNews:(NSArray *)news {
+    self.newsArray = news;
+    [self.tableView reloadData];
 }
 
 @end
