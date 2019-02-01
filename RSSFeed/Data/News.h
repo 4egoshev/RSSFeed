@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *descript;
 @property (strong, nonatomic) NSURL *link;
+@property (strong, nonatomic) NSDate *date;
 
 -(void) setValue:(NSString*)value forProperty:(NSString*)property;
 

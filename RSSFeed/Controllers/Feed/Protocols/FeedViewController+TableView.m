@@ -32,8 +32,9 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithClass:[NewsCell class] forIndexPath:indexPath];
-    cell.textLabel.text = self.newsArray[indexPath.row].title;
+    NewsCell *cell = [tableView dequeueReusableCellWithClass:[NewsCell class] forIndexPath:indexPath];
+    cell.news = self.newsArray[indexPath.row];
+    [cell config];
     return cell;
 }
 

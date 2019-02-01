@@ -7,12 +7,36 @@
 //
 
 #import "NewsCell.h"
+#import "News.h"
+#import "Formatter.h"
+
+@interface NewsCell () {
+
+    __weak IBOutlet UILabel *titleLabel;
+    __weak IBOutlet UILabel *descriptionLabel;
+    __weak IBOutlet UILabel *dateLabel;
+}
+
+@end
 
 @implementation NewsCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+}
+
+- (void)config {
+    titleLabel.text = _news.title;
+    descriptionLabel.text = _news.descript;
+    dateLabel.text = [Formatter dateString:_news.date];
+}
+
+-(void)prepareForReuse{
+    [super prepareForReuse];
+    titleLabel = nil;
+    descriptionLabel = nil;
+    dateLabel = nil;
+    
 }
 
 @end

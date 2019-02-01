@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class News;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NewsCell : UITableViewCell
+
+@property (strong, nonatomic) News *news;
+
+- (void)config;
 
 @end
 

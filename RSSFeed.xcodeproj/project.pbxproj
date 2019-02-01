@@ -23,6 +23,7 @@
 		23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807912202DAD0008F6F39 /* ScreenFactory.m */; };
 		23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807A02203B0E2008F6F39 /* XMLParseManager.m */; };
 		23EA58FB2203C368006FC87F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FA2203C368006FC87F /* News.m */; };
+		23EA59002203E4E1006FC87F /* Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FF2203E4E1006FC87F /* Formatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		23D807A02203B0E2008F6F39 /* XMLParseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLParseManager.m; sourceTree = "<group>"; };
 		23EA58F92203C368006FC87F /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		23EA58FA2203C368006FC87F /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		23EA58FE2203E4E1006FC87F /* Formatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Formatter.h; sourceTree = "<group>"; };
+		23EA58FF2203E4E1006FC87F /* Formatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Formatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 		23D8078B2202D88D008F6F39 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				23EA59012203E64F006FC87F /* Format */,
 				23D8078F2202D97E008F6F39 /* Screen */,
 				23EA58FC2203E0CC006FC87F /* Parse */,
 				23D8078A2202D722008F6F39 /* Extentions */,
@@ -195,6 +199,15 @@
 				23EA58FA2203C368006FC87F /* News.m */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		23EA59012203E64F006FC87F /* Format */ = {
+			isa = PBXGroup;
+			children = (
+				23EA58FE2203E4E1006FC87F /* Formatter.h */,
+				23EA58FF2203E4E1006FC87F /* Formatter.m */,
+			);
+			path = Format;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +288,7 @@
 				23D807582202A01A008F6F39 /* ViewController.m in Sources */,
 				23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */,
 				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
+				23EA59002203E4E1006FC87F /* Formatter.m in Sources */,
 				23D807632202A01A008F6F39 /* main.m in Sources */,
 				23D807832202D318008F6F39 /* NewsCell.m in Sources */,
 				23D8076C2202A2F0008F6F39 /* FeedViewController.m in Sources */,
