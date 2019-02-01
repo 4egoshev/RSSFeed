@@ -64,7 +64,6 @@ typedef enum : NSInteger {
             [buttonCell config];
             return buttonCell;
         }
-           // break;
         default:
             break;
     }
@@ -96,7 +95,7 @@ typedef enum : NSInteger {
 @implementation DetailViewController (ButtonCellDelegate)
 
 - (void)openSafari {
-    NSLog(@"open");
+    [[UIApplication sharedApplication] openURL:self.news.link options:@{} completionHandler:nil];
 }
 
 @end
