@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class News;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ScreenFactory : NSObject
 
 + (UIViewController *)feedViewController;
++ (UIViewController *)detailViewControllerWith:(News *)news;
 
 @end
 

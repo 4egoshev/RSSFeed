@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class News;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ScreenManager : NSObject
 
 + (void)configMainWindow:(UIWindow *)window;
++ (void)pushDetailViewContrller:(News *)news;
 
 @end
 

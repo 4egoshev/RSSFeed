@@ -16,6 +16,12 @@
     }
 }
 
+- (void)registerNibFromArrayClass:(NSArray<Class> *)array {
+    for (Class class in array) {
+        [self registerNibFromClass:class];
+    }
+}
+
 - (nonnull __kindof UITableViewCell *)dequeueReusableCellWithClass:(nonnull Class)className
                                                       forIndexPath:(nonnull NSIndexPath *)indexPath {
     return [self dequeueReusableCellWithIdentifier:NSStringFromClass(className)

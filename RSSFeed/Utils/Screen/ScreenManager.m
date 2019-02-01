@@ -14,8 +14,25 @@
 
 @implementation ScreenManager
 
+#pragma mark - Getters
++ (UINavigationController *)rootNavigationController {
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    UINavigationController *controller = (UINavigationController *)[window rootViewController];
+    return controller;
+}
+
++ (void)push:(UIViewController *)controller {
+    [[self rootNavigationController] pushViewController:controller animated:true];
+}
+
+#pragma mark - Controllers
+
 + (void)configMainWindow:(UIWindow *)window {
     window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ScreenFactory feedViewController]];
+}
+
++ (void)pushDetailViewContrller:(News *)news {
+    [self push:[ScreenFactory detailViewControllerWith:news]];
 }
 
 @end

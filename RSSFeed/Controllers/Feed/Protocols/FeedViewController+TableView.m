@@ -9,6 +9,7 @@
 #import "FeedViewController+TableView.h"
 #import "UITableView+registerNib.h"
 
+#import "ScreenManager.h"
 #import "NewsCell.h"
 #import "News.h"
 
@@ -17,6 +18,7 @@
 
 - (void)setupTableView {
     [self.tableView registerNibFromClass:[NewsCell class]];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 @end
@@ -51,6 +53,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44.0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    [ScreenManager pushDetailViewContrller:self.newsArray[indexPath.row]];
 }
 
 @end

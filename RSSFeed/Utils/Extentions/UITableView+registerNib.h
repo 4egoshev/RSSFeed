@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerNibFromClass:(Class)className;
 
+- (void)registerNibFromArrayClass:(NSArray<Class> *)array;
+
 - (nonnull __kindof UITableViewCell *)dequeueReusableCellWithClass:(nonnull Class)className
                                                       forIndexPath:(nonnull NSIndexPath *)indexPath;
 

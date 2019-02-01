@@ -10,11 +10,20 @@
 
 #import "ScreenFactory.h"
 #import "FeedViewController.h"
+#import "DetailViewController.h"
+#import "News.h"
 
 @implementation ScreenFactory
 
 + (UIViewController *)feedViewController {
-    return [FeedViewController new];
+    FeedViewController *controller = [FeedViewController new];
+    return controller;
+}
+
++ (UIViewController *)detailViewControllerWith:(News *)news {
+    DetailViewController *controller = [DetailViewController new];
+    controller.news = news;
+    return controller;
 }
 
 @end
