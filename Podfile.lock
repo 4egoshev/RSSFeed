@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 8be43c8a5790e26a82c9c67f5f73b5fcd784b73b
+PODS:
+  - LGSideMenuController (2.1.1)
+
+DEPENDENCIES:
+  - LGSideMenuController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - LGSideMenuController
+
+SPEC CHECKSUMS:
+  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
+
+PODFILE CHECKSUM: 5702e6211f057b4f38e353e70fb6954bd25060cb
 
 COCOAPODS: 1.5.3

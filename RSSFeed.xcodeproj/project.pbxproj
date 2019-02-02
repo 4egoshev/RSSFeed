@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23776A212205B92000099CB3 /* u.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776A202205B92000099CB3 /* u.swift */; };
 		23895D6C22043FB400D7DC30 /* DateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6A22043FB400D7DC30 /* DateCell.m */; };
 		23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D6B22043FB400D7DC30 /* DateCell.xib */; };
 		23895D712204406B00D7DC30 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6F2204406B00D7DC30 /* ButtonCell.m */; };
@@ -17,7 +16,6 @@
 		23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D822205602600D7DC30 /* FeedHeaderView.xib */; };
 		23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D852205606000D7DC30 /* FeedHeaderView.m */; };
 		23D807552202A01A008F6F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807542202A01A008F6F39 /* AppDelegate.m */; };
-		23D807582202A01A008F6F39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807572202A01A008F6F39 /* ViewController.m */; };
 		23D8075B2202A01A008F6F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D807592202A01A008F6F39 /* Main.storyboard */; };
 		23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D8075C2202A01A008F6F39 /* Assets.xcassets */; };
 		23D807602202A01A008F6F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D8075E2202A01A008F6F39 /* LaunchScreen.storyboard */; };
@@ -44,7 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23776A202205B92000099CB3 /* u.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = u.swift; sourceTree = "<group>"; };
 		23895D6922043FB400D7DC30 /* DateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCell.h; sourceTree = "<group>"; };
 		23895D6A22043FB400D7DC30 /* DateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCell.m; sourceTree = "<group>"; };
 		23895D6B22043FB400D7DC30 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
@@ -61,8 +58,6 @@
 		23D807502202A01A008F6F39 /* RSSFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D807532202A01A008F6F39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23D807542202A01A008F6F39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		23D807562202A01A008F6F39 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		23D807572202A01A008F6F39 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		23D8075A2202A01A008F6F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23D8075C2202A01A008F6F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23D8075F2202A01A008F6F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,7 +162,6 @@
 			children = (
 				23D807532202A01A008F6F39 /* AppDelegate.h */,
 				23D807542202A01A008F6F39 /* AppDelegate.m */,
-				23776A202205B92000099CB3 /* u.swift */,
 				23EA58FD2203E21F006FC87F /* Data */,
 				23D8078B2202D88D008F6F39 /* Utils */,
 				23D8076E2202A2F8008F6F39 /* Controllers */,
@@ -183,7 +177,6 @@
 		23D8076E2202A2F8008F6F39 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				23D8077C2202A763008F6F39 /* Root */,
 				23D8076F2202A400008F6F39 /* Feed */,
 				23EA590722043435006FC87F /* Detail */,
 			);
@@ -210,15 +203,6 @@
 				23D807792202A611008F6F39 /* FeedViewController+TableView.m */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		23D8077C2202A763008F6F39 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				23D807562202A01A008F6F39 /* ViewController.h */,
-				23D807572202A01A008F6F39 /* ViewController.m */,
-			);
-			path = Root;
 			sourceTree = "<group>";
 		};
 		23D807852202D31E008F6F39 /* Cell */ = {
@@ -455,7 +439,6 @@
 				23EA58FB2203C368006FC87F /* News.m in Sources */,
 				23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */,
 				23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */,
-				23D807582202A01A008F6F39 /* ViewController.m in Sources */,
 				23EA590A220434B8006FC87F /* DetailViewController+TableView.m in Sources */,
 				23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */,
 				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
@@ -468,7 +451,6 @@
 				23EA59052204342C006FC87F /* DetailViewController.m in Sources */,
 				23895D6C22043FB400D7DC30 /* DateCell.m in Sources */,
 				23D8076C2202A2F0008F6F39 /* FeedViewController.m in Sources */,
-				23776A212205B92000099CB3 /* u.swift in Sources */,
 				23D807552202A01A008F6F39 /* AppDelegate.m in Sources */,
 				23D8077A2202A611008F6F39 /* FeedViewController+TableView.m in Sources */,
 			);

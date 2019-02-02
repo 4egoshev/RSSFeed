@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class MainViewController;
 @class News;
 
 @interface FeedViewController : UIViewController

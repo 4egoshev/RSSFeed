@@ -8,7 +8,9 @@
 
 #import "FeedViewController.h"
 #import "FeedViewController+TableView.h"
+#import "UIViewController+LGSideMenuController.h"
 #import "XMLParseManager.h"
+#import "ScreenManager.h"
 
 #import "Utils.h"
 
@@ -20,8 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavBar];
     [self setupTableView];
     [self setupParser];
+}
+
+- (void)setupNavBar {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list"] style:UIBarButtonItemStylePlain target:self action:@selector(listAction:)];
 }
 
 - (void)setupParser {
@@ -34,6 +41,10 @@
     self.newsArray = [Utils sortNews:news];
     self.dateArray = [Utils createDates:news];
     [self.tableView reloadData];
+}
+
+- (void)listAction:(id)sender {
+    [ScreenManager showList];
 }
 
 @end

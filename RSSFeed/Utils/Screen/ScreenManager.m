@@ -7,18 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+LGSideMenuController.h"
 
 #import "ScreenManager.h"
 #import "ScreenFactory.h"
 #import "FeedViewController.h"
+#import "LGSideMenuController.h"
 
 @implementation ScreenManager
+
++ (void)configMainWindow:(UIWindow *)window {
+    window.rootViewController = (LGSideMenuController *)[ScreenFactory listViewController];
+}
 
 #pragma mark - Getters
 + (UINavigationController *)rootNavigationController {
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-    UINavigationController *controller = (UINavigationController *)[window rootViewController];
-    return controller;
+    LGSideMenuController *mainController = (LGSideMenuController *)[window rootViewController];
+    UINavigationController *navController = (UINavigationController *)mainController.rootViewController;
+    return navController;
 }
 
 + (void)push:(UIViewController *)controller {
@@ -27,12 +34,13 @@
 
 #pragma mark - Controllers
 
-+ (void)configMainWindow:(UIWindow *)window {
-    window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ScreenFactory feedViewController]];
-}
-
 + (void)pushDetailViewContrller:(News *)news {
     [self push:[ScreenFactory detailViewControllerWith:news]];
+}
+
++ (void)showList {
+    FeedViewController *controller = [self rootNavigationController].viewControllers.firstObject;
+    [controller.sideMenuController showLeftViewAnimated:YES completionHandler:nil];
 }
 
 @end
