@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23776A212205B92000099CB3 /* u.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776A202205B92000099CB3 /* u.swift */; };
 		23895D6C22043FB400D7DC30 /* DateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6A22043FB400D7DC30 /* DateCell.m */; };
 		23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D6B22043FB400D7DC30 /* DateCell.xib */; };
 		23895D712204406B00D7DC30 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6F2204406B00D7DC30 /* ButtonCell.m */; };
@@ -39,9 +40,11 @@
 		23EA591022043C47006FC87F /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23EA590E22043C47006FC87F /* TitleCell.xib */; };
 		23EA591A22043DB6006FC87F /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA591822043DB6006FC87F /* DescriptionCell.m */; };
 		23EA591B22043DB6006FC87F /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23EA591922043DB6006FC87F /* DescriptionCell.xib */; };
+		A6E9771A4F11AB38836034B1 /* libPods-RSSFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BC58230E682B79E754643E /* libPods-RSSFeed.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23776A202205B92000099CB3 /* u.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = u.swift; sourceTree = "<group>"; };
 		23895D6922043FB400D7DC30 /* DateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCell.h; sourceTree = "<group>"; };
 		23895D6A22043FB400D7DC30 /* DateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCell.m; sourceTree = "<group>"; };
 		23895D6B22043FB400D7DC30 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
@@ -96,6 +99,9 @@
 		23EA591722043DB6006FC87F /* DescriptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionCell.h; sourceTree = "<group>"; };
 		23EA591822043DB6006FC87F /* DescriptionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionCell.m; sourceTree = "<group>"; };
 		23EA591922043DB6006FC87F /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
+		2CE508338C1CFE780CB4EDD5 /* Pods-RSSFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeed/Pods-RSSFeed.debug.xcconfig"; sourceTree = "<group>"; };
+		A74758A85F38A29B0BD86E20 /* Pods-RSSFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeed/Pods-RSSFeed.release.xcconfig"; sourceTree = "<group>"; };
+		C2BC58230E682B79E754643E /* libPods-RSSFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSSFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E9771A4F11AB38836034B1 /* libPods-RSSFeed.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +149,8 @@
 			children = (
 				23D807522202A01A008F6F39 /* RSSFeed */,
 				23D807512202A01A008F6F39 /* Products */,
+				386BAA013B058EAF5D7AA9E9 /* Pods */,
+				2F1288A464981434C7EAF0D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +167,7 @@
 			children = (
 				23D807532202A01A008F6F39 /* AppDelegate.h */,
 				23D807542202A01A008F6F39 /* AppDelegate.m */,
+				23776A202205B92000099CB3 /* u.swift */,
 				23EA58FD2203E21F006FC87F /* Data */,
 				23D8078B2202D88D008F6F39 /* Utils */,
 				23D8076E2202A2F8008F6F39 /* Controllers */,
@@ -321,6 +331,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2F1288A464981434C7EAF0D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2BC58230E682B79E754643E /* libPods-RSSFeed.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		386BAA013B058EAF5D7AA9E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CE508338C1CFE780CB4EDD5 /* Pods-RSSFeed.debug.xcconfig */,
+				A74758A85F38A29B0BD86E20 /* Pods-RSSFeed.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +355,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23D807662202A01A008F6F39 /* Build configuration list for PBXNativeTarget "RSSFeed" */;
 			buildPhases = (
+				6DA55192FD12F12904C65762 /* [CP] Check Pods Manifest.lock */,
 				23D8074C2202A01A008F6F39 /* Sources */,
 				23D8074D2202A01A008F6F39 /* Frameworks */,
 				23D8074E2202A01A008F6F39 /* Resources */,
@@ -352,6 +380,7 @@
 				TargetAttributes = {
 					23D8074F2202A01A008F6F39 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -394,6 +423,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6DA55192FD12F12904C65762 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSSFeed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23D8074C2202A01A008F6F39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -418,6 +468,7 @@
 				23EA59052204342C006FC87F /* DetailViewController.m in Sources */,
 				23895D6C22043FB400D7DC30 /* DateCell.m in Sources */,
 				23D8076C2202A2F0008F6F39 /* FeedViewController.m in Sources */,
+				23776A212205B92000099CB3 /* u.swift in Sources */,
 				23D807552202A01A008F6F39 /* AppDelegate.m in Sources */,
 				23D8077A2202A611008F6F39 /* FeedViewController+TableView.m in Sources */,
 			);
@@ -559,8 +610,10 @@
 		};
 		23D807672202A01A008F6F39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE508338C1CFE780CB4EDD5 /* Pods-RSSFeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
 				INFOPLIST_FILE = RSSFeed/Info.plist;
@@ -571,14 +624,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.RSSFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSFeed/RSSFeed-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		23D807682202A01A008F6F39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A74758A85F38A29B0BD86E20 /* Pods-RSSFeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
 				INFOPLIST_FILE = RSSFeed/Info.plist;
@@ -589,6 +647,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.RSSFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSFeed/RSSFeed-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
