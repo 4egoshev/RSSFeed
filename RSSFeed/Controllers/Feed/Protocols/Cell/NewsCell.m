@@ -28,7 +28,7 @@
 - (void)config {
     titleLabel.text = _news.title;
     descriptionLabel.text = _news.descript;
-    dateLabel.text = [Formatter dateString:_news.date];
+    dateLabel.text = [Formatter dateStringForFeed:_news.date];
 }
 
 -(void)prepareForReuse{
@@ -36,7 +36,6 @@
     titleLabel = nil;
     descriptionLabel = nil;
     dateLabel = nil;
-    
 }
 
 @end

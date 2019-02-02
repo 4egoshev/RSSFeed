@@ -51,9 +51,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="dateLabel" destination="8Nv-rK-AA5" id="HBQ-nq-iJB"/>
-                <outlet property="descriptionLabel" destination="QN1-yc-d39" id="djL-DT-JU5"/>
-                <outlet property="titleLabel" destination="9gN-wz-kVR" id="UfL-89-DCy"/>
+                <outlet property="dateLabel" destination="8Nv-rK-AA5" id="5mG-4v-8fJ"/>
+                <outlet property="descriptionLabel" destination="QN1-yc-d39" id="2Ga-8r-e97"/>
+                <outlet property="titleLabel" destination="9gN-wz-kVR" id="grU-SK-9Y3"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="252.32383808095955"/>
         </tableViewCell>

@@ -10,9 +10,22 @@
 
 @implementation Formatter
 
-+ (NSString *)dateString:(NSDate *)date {
++ (NSDate *)dateFromString:(NSString *)string {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    dateFormat.locale = [NSLocale localeWithLocaleIdentifier:@"en_EN"];
+    [dateFormat setDateFormat:@"EE, d LLLL yyyy HH:mm:ss Z"];
+    return [dateFormat dateFromString:string];
+}
+
++ (NSString *)dateStringForFeed:(NSDate *)date {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"d MMM yyyy"];
+    [formatter setDateFormat:@"HH:mm"];
+    return [formatter stringFromDate:date];
+}
+
++ (NSString *)dateStrngForHaeder:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEEE, d MMMM"];
     return [formatter stringFromDate:date];
 }
 

@@ -1,5 +1,5 @@
 //
-//  Formatter.h
+//  Utils.h
 //  RSSFeed
 //
 //  Created by Александр Чегошев on 01/02/2019.
@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+@class News;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Formatter : NSObject
+@interface Utils : NSObject
 
-+ (NSDate *)dateFromString:(NSString *)string;
++ (NSArray *)sortNews:(NSArray<News*> *)news;
 
-+ (NSString *)dateStringForFeed:(NSDate *)date;
++ (NSArray *)createDates:(NSArray<News*> *)news;
 
-+ (NSString *)dateStrngForHaeder:(NSDate *)date;
++ (BOOL)isToday:(NSDate *)date;
 
 @end
 

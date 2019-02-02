@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) NSXMLParser *parser;
 
-@property (strong, nonatomic) NSArray<News *> *newsArray;
+@property (strong, nonatomic) NSArray *dateArray;
+@property (strong, nonatomic) NSArray<NSArray<News*>*> *newsArray;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "News.h"
+#import "Formatter.h"
 
 @implementation News
 
@@ -21,9 +22,7 @@
         _descript=value;
     }
     if ([property isEqualToString:@"pubDate"]) {
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"EE, d LLLL yyyy HH:mm:ss Z"];
-        _date = [dateFormat dateFromString:value];
+        _date = [Formatter dateFromString:value];
     }
 }
 

@@ -31,7 +31,7 @@
     return manager;
 }
 
-- (void)setupParser {
+- (void)start {
     newsArray = [NSMutableArray new];
     NSURL *url = [NSURL URLWithString:@"https://lenta.ru/rss"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];

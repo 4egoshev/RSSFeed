@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)manager;
 
-- (void)setupParser;
+- (void)start;
 
 @end
 

@@ -8,9 +8,11 @@
 
 #import "FeedViewController+TableView.h"
 #import "UITableView+registerNib.h"
+#import "UIView+loadFromNib.h"
 
 #import "ScreenManager.h"
 #import "NewsCell.h"
+#import "FeedHeaderView.h"
 #import "News.h"
 
 
@@ -29,13 +31,17 @@
 
 @implementation FeedViewController (TableViewDataSource)
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dateArray.count;
+}
+
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.newsArray.count;
+    return self.newsArray[section].count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NewsCell *cell = [tableView dequeueReusableCellWithClass:[NewsCell class] forIndexPath:indexPath];
-    cell.news = self.newsArray[indexPath.row];
+    cell.news = self.newsArray[indexPath.section][indexPath.row];
     [cell config];
     return cell;
 }
@@ -47,6 +53,11 @@
 
 @implementation FeedViewController (TableViewDelegate)
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    [ScreenManager pushDetailViewContrller:self.newsArray[indexPath.section][indexPath.row]];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
 }
@@ -55,9 +66,19 @@
     return 44.0;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:true];
-    [ScreenManager pushDetailViewContrller:self.newsArray[indexPath.row]];
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
+    return 44.0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    FeedHeaderView *view = (FeedHeaderView *)[FeedHeaderView loadFromNib];
+    view.date = self.dateArray[section];
+    [view config];
+    return view;
 }
 
 @end

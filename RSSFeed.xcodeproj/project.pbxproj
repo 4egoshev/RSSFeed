@@ -11,6 +11,10 @@
 		23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D6B22043FB400D7DC30 /* DateCell.xib */; };
 		23895D712204406B00D7DC30 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6F2204406B00D7DC30 /* ButtonCell.m */; };
 		23895D722204406B00D7DC30 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D702204406B00D7DC30 /* ButtonCell.xib */; };
+		23895D78220460C200D7DC30 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D77220460C200D7DC30 /* Utils.m */; };
+		23895D7C22055ECD00D7DC30 /* UIView+loadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D7B22055ECD00D7DC30 /* UIView+loadFromNib.m */; };
+		23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D822205602600D7DC30 /* FeedHeaderView.xib */; };
+		23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D852205606000D7DC30 /* FeedHeaderView.m */; };
 		23D807552202A01A008F6F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807542202A01A008F6F39 /* AppDelegate.m */; };
 		23D807582202A01A008F6F39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807572202A01A008F6F39 /* ViewController.m */; };
 		23D8075B2202A01A008F6F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D807592202A01A008F6F39 /* Main.storyboard */; };
@@ -44,6 +48,13 @@
 		23895D6E2204406B00D7DC30 /* ButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
 		23895D6F2204406B00D7DC30 /* ButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
 		23895D702204406B00D7DC30 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		23895D76220460C200D7DC30 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		23895D77220460C200D7DC30 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		23895D7A22055ECD00D7DC30 /* UIView+loadFromNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+loadFromNib.h"; sourceTree = "<group>"; };
+		23895D7B22055ECD00D7DC30 /* UIView+loadFromNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+loadFromNib.m"; sourceTree = "<group>"; };
+		23895D822205602600D7DC30 /* FeedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedHeaderView.xib; sourceTree = "<group>"; };
+		23895D842205606000D7DC30 /* FeedHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedHeaderView.h; sourceTree = "<group>"; };
+		23895D852205606000D7DC30 /* FeedHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedHeaderView.m; sourceTree = "<group>"; };
 		23D807502202A01A008F6F39 /* RSSFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D807532202A01A008F6F39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23D807542202A01A008F6F39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,6 +109,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23895D7922055EA000D7DC30 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				23D807872202D566008F6F39 /* UITableView+registerNib.h */,
+				23D807882202D566008F6F39 /* UITableView+registerNib.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		23895D7D22055ED500D7DC30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23895D7A22055ECD00D7DC30 /* UIView+loadFromNib.h */,
+				23895D7B22055ECD00D7DC30 /* UIView+loadFromNib.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23895D812205600900D7DC30 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				23895D842205606000D7DC30 /* FeedHeaderView.h */,
+				23895D852205606000D7DC30 /* FeedHeaderView.m */,
+				23895D822205602600D7DC30 /* FeedHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		23D807472202A01A008F6F39 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +194,7 @@
 		23D8077B2202A6FE008F6F39 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				23895D812205600900D7DC30 /* Header */,
 				23D807852202D31E008F6F39 /* Cell */,
 				23D807782202A611008F6F39 /* FeedViewController+TableView.h */,
 				23D807792202A611008F6F39 /* FeedViewController+TableView.m */,
@@ -184,8 +224,8 @@
 		23D8078A2202D722008F6F39 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				23D807872202D566008F6F39 /* UITableView+registerNib.h */,
-				23D807882202D566008F6F39 /* UITableView+registerNib.m */,
+				23895D7922055EA000D7DC30 /* TableView */,
+				23895D7D22055ED500D7DC30 /* View */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -235,6 +275,8 @@
 			children = (
 				23EA58FE2203E4E1006FC87F /* Formatter.h */,
 				23EA58FF2203E4E1006FC87F /* Formatter.m */,
+				23895D76220460C200D7DC30 /* Utils.h */,
+				23895D77220460C200D7DC30 /* Utils.m */,
 			);
 			path = Format;
 			sourceTree = "<group>";
@@ -343,6 +385,7 @@
 				23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */,
 				23D807842202D318008F6F39 /* NewsCell.xib in Resources */,
 				23D8076D2202A2F0008F6F39 /* FeedViewController.xib in Resources */,
+				23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */,
 				23895D722204406B00D7DC30 /* ButtonCell.xib in Resources */,
 				23EA591022043C47006FC87F /* TitleCell.xib in Resources */,
 				23D8075B2202A01A008F6F39 /* Main.storyboard in Resources */,
@@ -360,6 +403,7 @@
 				23895D712204406B00D7DC30 /* ButtonCell.m in Sources */,
 				23D807892202D566008F6F39 /* UITableView+registerNib.m in Sources */,
 				23EA58FB2203C368006FC87F /* News.m in Sources */,
+				23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */,
 				23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */,
 				23D807582202A01A008F6F39 /* ViewController.m in Sources */,
 				23EA590A220434B8006FC87F /* DetailViewController+TableView.m in Sources */,
@@ -367,6 +411,8 @@
 				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
 				23EA590F22043C47006FC87F /* TitleCell.m in Sources */,
 				23EA59002203E4E1006FC87F /* Formatter.m in Sources */,
+				23895D78220460C200D7DC30 /* Utils.m in Sources */,
+				23895D7C22055ECD00D7DC30 /* UIView+loadFromNib.m in Sources */,
 				23D807632202A01A008F6F39 /* main.m in Sources */,
 				23D807832202D318008F6F39 /* NewsCell.m in Sources */,
 				23EA59052204342C006FC87F /* DetailViewController.m in Sources */,
@@ -518,6 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
 				INFOPLIST_FILE = RSSFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,6 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
 				INFOPLIST_FILE = RSSFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
