@@ -25,12 +25,19 @@
     return navController;
 }
 
++ (UINavigationController *)wrapListToNavigationController:(UIViewController *)controller {
+    ListNavigationViewController *navController = [[ListNavigationViewController alloc] initWithRootViewController:controller];
+    return navController;
+}
+
 #pragma mark - Controllers
 
 + (LGSideMenuController *)mainViewController {
     LGSideMenuController *mainController = [[LGSideMenuController alloc] initWithRootViewController:[self feedViewController]];
-    mainController.rootViewController = [self wrapToNavigationController:[self feedViewController]];
-    mainController.leftViewController = [self listViewController];
+    ListViewController *controller = [ListViewController new];
+    mainController.delegate = (id<LGSideMenuDelegate>)controller;
+    mainController.rootViewController = [self wrapListToNavigationController:[self feedViewController]];
+    mainController.leftViewController = [self wrapListToNavigationController:controller];
     mainController.leftViewWidth = mainController.view.bounds.size.width * 0.80;
     mainController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
     mainController.leftViewBackgroundColor = [UIColor colorWithRed:0.5 green:0.65 blue:0.5 alpha:0.95];
@@ -41,11 +48,6 @@
 + (UIViewController *)feedViewController {
     FeedViewController *controller = [FeedViewController new];
     return controller;
-}
-
-+ (UINavigationController *)listViewController {
-    ListNavigationViewController *navController = [[ListNavigationViewController alloc] initWithRootViewController:[ListViewController new]];
-    return navController;
 }
 
 + (UIViewController *)detailViewControllerWith:(News *)news {

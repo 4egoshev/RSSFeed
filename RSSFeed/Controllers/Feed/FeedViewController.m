@@ -11,8 +11,8 @@
 #import "UIViewController+LGSideMenuController.h"
 #import "XMLParseManager.h"
 #import "ScreenManager.h"
-
 #import "Utils.h"
+#import "RealmManager.h"
 
 @interface FeedViewController () <XMLParseManagerDelegate>
 
@@ -25,6 +25,8 @@
     [self setupNavBar];
     [self setupTableView];
     [self setupParser];
+    
+    [RealmManager createDefaultSource];
 }
 
 - (void)setupNavBar {

@@ -11,6 +11,9 @@
 		23776A2A2205EBA500099CB3 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23776A282205EBA500099CB3 /* ListViewController.xib */; };
 		23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A2D2205EF8800099CB3 /* ListNavigationViewController.m */; };
 		23776A312205F10500099CB3 /* ListViewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A302205F10500099CB3 /* ListViewController+TableView.m */; };
+		23776A352206B97000099CB3 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A342206B97000099CB3 /* Source.m */; };
+		23776A3E2206C55A00099CB3 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A3C2206C55A00099CB3 /* SourceCell.m */; };
+		23776A3F2206C55A00099CB3 /* SourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23776A3D2206C55A00099CB3 /* SourceCell.xib */; };
 		23895D6C22043FB400D7DC30 /* DateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6A22043FB400D7DC30 /* DateCell.m */; };
 		23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D6B22043FB400D7DC30 /* DateCell.xib */; };
 		23895D712204406B00D7DC30 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6F2204406B00D7DC30 /* ButtonCell.m */; };
@@ -19,6 +22,8 @@
 		23895D7C22055ECD00D7DC30 /* UIView+loadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D7B22055ECD00D7DC30 /* UIView+loadFromNib.m */; };
 		23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D822205602600D7DC30 /* FeedHeaderView.xib */; };
 		23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D852205606000D7DC30 /* FeedHeaderView.m */; };
+		23D768D92206CA3A00104257 /* SourceHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D768D82206CA3A00104257 /* SourceHeaderView.m */; };
+		23D768DB2206CA4900104257 /* SourceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D768DA2206CA4900104257 /* SourceHeaderView.xib */; };
 		23D807552202A01A008F6F39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807542202A01A008F6F39 /* AppDelegate.m */; };
 		23D8075B2202A01A008F6F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D807592202A01A008F6F39 /* Main.storyboard */; };
 		23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D8075C2202A01A008F6F39 /* Assets.xcassets */; };
@@ -33,6 +38,7 @@
 		23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D8078D2202D977008F6F39 /* ScreenManager.m */; };
 		23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807912202DAD0008F6F39 /* ScreenFactory.m */; };
 		23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807A02203B0E2008F6F39 /* XMLParseManager.m */; };
+		23E693632206F1E200AE9051 /* RealmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E693622206F1E200AE9051 /* RealmManager.m */; };
 		23EA58FB2203C368006FC87F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FA2203C368006FC87F /* News.m */; };
 		23EA59002203E4E1006FC87F /* Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FF2203E4E1006FC87F /* Formatter.m */; };
 		23EA59052204342C006FC87F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA59032204342C006FC87F /* DetailViewController.m */; };
@@ -53,6 +59,11 @@
 		23776A2D2205EF8800099CB3 /* ListNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNavigationViewController.m; sourceTree = "<group>"; };
 		23776A2F2205F10500099CB3 /* ListViewController+TableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListViewController+TableView.h"; sourceTree = "<group>"; };
 		23776A302205F10500099CB3 /* ListViewController+TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ListViewController+TableView.m"; sourceTree = "<group>"; };
+		23776A332206B97000099CB3 /* Source.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Source.h; sourceTree = "<group>"; };
+		23776A342206B97000099CB3 /* Source.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Source.m; sourceTree = "<group>"; };
+		23776A3B2206C55A00099CB3 /* SourceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceCell.h; sourceTree = "<group>"; };
+		23776A3C2206C55A00099CB3 /* SourceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceCell.m; sourceTree = "<group>"; };
+		23776A3D2206C55A00099CB3 /* SourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceCell.xib; sourceTree = "<group>"; };
 		23895D6922043FB400D7DC30 /* DateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCell.h; sourceTree = "<group>"; };
 		23895D6A22043FB400D7DC30 /* DateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCell.m; sourceTree = "<group>"; };
 		23895D6B22043FB400D7DC30 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
@@ -66,6 +77,9 @@
 		23895D822205602600D7DC30 /* FeedHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedHeaderView.xib; sourceTree = "<group>"; };
 		23895D842205606000D7DC30 /* FeedHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedHeaderView.h; sourceTree = "<group>"; };
 		23895D852205606000D7DC30 /* FeedHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedHeaderView.m; sourceTree = "<group>"; };
+		23D768D72206CA3A00104257 /* SourceHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceHeaderView.h; sourceTree = "<group>"; };
+		23D768D82206CA3A00104257 /* SourceHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceHeaderView.m; sourceTree = "<group>"; };
+		23D768DA2206CA4900104257 /* SourceHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceHeaderView.xib; sourceTree = "<group>"; };
 		23D807502202A01A008F6F39 /* RSSFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D807532202A01A008F6F39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23D807542202A01A008F6F39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +104,8 @@
 		23D807912202DAD0008F6F39 /* ScreenFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenFactory.m; sourceTree = "<group>"; };
 		23D8079F2203B0E2008F6F39 /* XMLParseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLParseManager.h; sourceTree = "<group>"; };
 		23D807A02203B0E2008F6F39 /* XMLParseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLParseManager.m; sourceTree = "<group>"; };
+		23E693612206F1E200AE9051 /* RealmManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealmManager.h; sourceTree = "<group>"; };
+		23E693622206F1E200AE9051 /* RealmManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmManager.m; sourceTree = "<group>"; };
 		23EA58F92203C368006FC87F /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		23EA58FA2203C368006FC87F /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		23EA58FE2203E4E1006FC87F /* Formatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Formatter.h; sourceTree = "<group>"; };
@@ -138,10 +154,22 @@
 		23776A322205F10C00099CB3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				23D768DC2206CA5400104257 /* Header */,
+				23776A402206C61200099CB3 /* Cell */,
 				23776A2F2205F10500099CB3 /* ListViewController+TableView.h */,
 				23776A302205F10500099CB3 /* ListViewController+TableView.m */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		23776A402206C61200099CB3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23776A3B2206C55A00099CB3 /* SourceCell.h */,
+				23776A3C2206C55A00099CB3 /* SourceCell.m */,
+				23776A3D2206C55A00099CB3 /* SourceCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		23895D7922055EA000D7DC30 /* TableView */ = {
@@ -170,6 +198,25 @@
 				23895D822205602600D7DC30 /* FeedHeaderView.xib */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		23D768DC2206CA5400104257 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				23D768D72206CA3A00104257 /* SourceHeaderView.h */,
+				23D768D82206CA3A00104257 /* SourceHeaderView.m */,
+				23D768DA2206CA4900104257 /* SourceHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		23D768E02206F06000104257 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				23E693612206F1E200AE9051 /* RealmManager.h */,
+				23E693622206F1E200AE9051 /* RealmManager.m */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		23D807472202A01A008F6F39 = {
@@ -265,6 +312,7 @@
 				23D8078F2202D97E008F6F39 /* Screen */,
 				23EA58FC2203E0CC006FC87F /* Parse */,
 				23D8078A2202D722008F6F39 /* Extentions */,
+				23D768E02206F06000104257 /* Realm */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -294,6 +342,8 @@
 			children = (
 				23EA58F92203C368006FC87F /* News.h */,
 				23EA58FA2203C368006FC87F /* News.m */,
+				23776A332206B97000099CB3 /* Source.h */,
+				23776A342206B97000099CB3 /* Source.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -435,6 +485,8 @@
 				23D8076D2202A2F0008F6F39 /* FeedViewController.xib in Resources */,
 				23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */,
 				23895D722204406B00D7DC30 /* ButtonCell.xib in Resources */,
+				23D768DB2206CA4900104257 /* SourceHeaderView.xib in Resources */,
+				23776A3F2206C55A00099CB3 /* SourceCell.xib in Resources */,
 				23EA591022043C47006FC87F /* TitleCell.xib in Resources */,
 				23D8075B2202A01A008F6F39 /* Main.storyboard in Resources */,
 			);
@@ -468,18 +520,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D768D92206CA3A00104257 /* SourceHeaderView.m in Sources */,
 				23EA591A22043DB6006FC87F /* DescriptionCell.m in Sources */,
 				23776A312205F10500099CB3 /* ListViewController+TableView.m in Sources */,
 				23895D712204406B00D7DC30 /* ButtonCell.m in Sources */,
+				23E693632206F1E200AE9051 /* RealmManager.m in Sources */,
 				23776A292205EBA500099CB3 /* ListViewController.m in Sources */,
 				23D807892202D566008F6F39 /* UITableView+registerNib.m in Sources */,
 				23EA58FB2203C368006FC87F /* News.m in Sources */,
 				23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */,
 				23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */,
+				23776A3E2206C55A00099CB3 /* SourceCell.m in Sources */,
 				23EA590A220434B8006FC87F /* DetailViewController+TableView.m in Sources */,
 				23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */,
 				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
 				23EA590F22043C47006FC87F /* TitleCell.m in Sources */,
+				23776A352206B97000099CB3 /* Source.m in Sources */,
 				23EA59002203E4E1006FC87F /* Formatter.m in Sources */,
 				23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */,
 				23895D78220460C200D7DC30 /* Utils.m in Sources */,

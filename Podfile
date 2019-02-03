@@ -6,5 +6,6 @@ target 'RSSFeed' do
   # use_frameworks!
 
   pod 'LGSideMenuController'
+  pod 'Realm'
 
 end

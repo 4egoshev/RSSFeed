@@ -30,7 +30,7 @@
 @interface DetailViewController (TableViewDataSource) <UITableViewDataSource>
 
 typedef enum : NSInteger {
-    TitleTipe,
+    TitleType,
     DescriptionType,
     DateType,
     ButtonType,
@@ -48,7 +48,7 @@ typedef enum : NSInteger {
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NewsCell *cell;
     switch (indexPath.row) {
-        case TitleTipe:
+        case TitleType:
             cell = [tableView dequeueReusableCellWithClass:[TitleCell class] forIndexPath:indexPath];
             break;
         case DescriptionType:
