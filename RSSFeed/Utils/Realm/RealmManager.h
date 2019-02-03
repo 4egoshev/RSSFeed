@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class Source;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RealmManager : NSObject
 
 + (void)createDefaultSource;
+
++ (void)saveSource:(Source *)source;
 
 + (void)updateReadFor:(NSInteger)sourceId;
 

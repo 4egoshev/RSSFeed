@@ -9,14 +9,17 @@
 #import <Realm/Realm.h>
 #import "RealmManager.h"
 #import "Source.h"
+#import "StringKeys.h"
 
 @implementation RealmManager
 
 #pragma mark - Create default
 + (void)createDefaultSource {
     if ([self isSourceEmpty]) {
+        NSInteger sourceId = [[NSUserDefaults standardUserDefaults] integerForKey:[StringKeys sourceIdKey]];
+        sourceId++;
         Source *source = [Source new];
-        source.sourceId = 1;
+        source.sourceId = sourceId;
         source.name = @"Лента.ру";
         source.urlString = @"https://lenta.ru/rss";
         source.isRead = true;
@@ -25,6 +28,7 @@
         [realm transactionWithBlock:^{
             [realm addOrUpdateObject:source];
         }];
+        sourceId++;
         Source *source2 = [Source new];
         source2.sourceId = 2;
         source2.name = @"Яндекс Технологии";
@@ -34,6 +38,7 @@
         [realm transactionWithBlock:^{
             [realm addOrUpdateObject:source2];
         }];
+        [[NSUserDefaults standardUserDefaults] setInteger:sourceId forKey:[StringKeys sourceIdKey]];
     }
 }
 
@@ -48,6 +53,15 @@
     } else {
         return false;
     }
+}
+
+#pragma mark - Save & Delete
+
++ (void)saveSource:(Source *)source {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm transactionWithBlock:^{
+        [realm addOrUpdateObject:source];
+    }];
 }
 
 #pragma mark - Read & Select

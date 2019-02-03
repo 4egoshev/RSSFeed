@@ -39,6 +39,12 @@
 		23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807912202DAD0008F6F39 /* ScreenFactory.m */; };
 		23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D807A02203B0E2008F6F39 /* XMLParseManager.m */; };
 		23E693632206F1E200AE9051 /* RealmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E693622206F1E200AE9051 /* RealmManager.m */; };
+		23E6936722072FB100AE9051 /* AddSourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6936522072FB100AE9051 /* AddSourseCell.m */; };
+		23E6936822072FB100AE9051 /* AddSourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E6936622072FB100AE9051 /* AddSourseCell.xib */; };
+		23E6936B2207318700AE9051 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6936A2207318700AE9051 /* Cell.m */; };
+		23E69375220752D100AE9051 /* NSString+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E69374220752D100AE9051 /* NSString+extention.m */; };
+		23E693792207542600AE9051 /* UITextField+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E693782207542600AE9051 /* UITextField+extention.m */; };
+		23E6937D2207620F00AE9051 /* StringKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6937C2207620F00AE9051 /* StringKeys.m */; };
 		23EA58FB2203C368006FC87F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FA2203C368006FC87F /* News.m */; };
 		23EA59002203E4E1006FC87F /* Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FF2203E4E1006FC87F /* Formatter.m */; };
 		23EA59052204342C006FC87F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA59032204342C006FC87F /* DetailViewController.m */; };
@@ -106,6 +112,17 @@
 		23D807A02203B0E2008F6F39 /* XMLParseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLParseManager.m; sourceTree = "<group>"; };
 		23E693612206F1E200AE9051 /* RealmManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealmManager.h; sourceTree = "<group>"; };
 		23E693622206F1E200AE9051 /* RealmManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmManager.m; sourceTree = "<group>"; };
+		23E6936422072FB100AE9051 /* AddSourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddSourseCell.h; sourceTree = "<group>"; };
+		23E6936522072FB100AE9051 /* AddSourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddSourseCell.m; sourceTree = "<group>"; };
+		23E6936622072FB100AE9051 /* AddSourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSourseCell.xib; sourceTree = "<group>"; };
+		23E693692207318700AE9051 /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		23E6936A2207318700AE9051 /* Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		23E69373220752D100AE9051 /* NSString+extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+extention.h"; sourceTree = "<group>"; };
+		23E69374220752D100AE9051 /* NSString+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+extention.m"; sourceTree = "<group>"; };
+		23E693772207542600AE9051 /* UITextField+extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+extention.h"; sourceTree = "<group>"; };
+		23E693782207542600AE9051 /* UITextField+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+extention.m"; sourceTree = "<group>"; };
+		23E6937B2207620F00AE9051 /* StringKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringKeys.h; sourceTree = "<group>"; };
+		23E6937C2207620F00AE9051 /* StringKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringKeys.m; sourceTree = "<group>"; };
 		23EA58F92203C368006FC87F /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		23EA58FA2203C368006FC87F /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		23EA58FE2203E4E1006FC87F /* Formatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Formatter.h; sourceTree = "<group>"; };
@@ -168,6 +185,9 @@
 				23776A3B2206C55A00099CB3 /* SourceCell.h */,
 				23776A3C2206C55A00099CB3 /* SourceCell.m */,
 				23776A3D2206C55A00099CB3 /* SourceCell.xib */,
+				23E6936422072FB100AE9051 /* AddSourseCell.h */,
+				23E6936522072FB100AE9051 /* AddSourseCell.m */,
+				23E6936622072FB100AE9051 /* AddSourseCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -242,6 +262,7 @@
 			children = (
 				23D807532202A01A008F6F39 /* AppDelegate.h */,
 				23D807542202A01A008F6F39 /* AppDelegate.m */,
+				23E6936D2207319700AE9051 /* View */,
 				23EA58FD2203E21F006FC87F /* Data */,
 				23D8078B2202D88D008F6F39 /* Utils */,
 				23D8076E2202A2F8008F6F39 /* Controllers */,
@@ -301,6 +322,8 @@
 			children = (
 				23895D7922055EA000D7DC30 /* TableView */,
 				23895D7D22055ED500D7DC30 /* View */,
+				23E69376220752D700AE9051 /* String */,
+				23E6937A2207557D00AE9051 /* TextField */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -308,11 +331,13 @@
 		23D8078B2202D88D008F6F39 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				23E6937F220781EA00AE9051 /* Common */,
 				23EA59012203E64F006FC87F /* Format */,
 				23D8078F2202D97E008F6F39 /* Screen */,
 				23EA58FC2203E0CC006FC87F /* Parse */,
 				23D8078A2202D722008F6F39 /* Extentions */,
 				23D768E02206F06000104257 /* Realm */,
+				23E6937E2207624100AE9051 /* Key */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -326,6 +351,59 @@
 				23D8078D2202D977008F6F39 /* ScreenManager.m */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		23E6936C2207318E00AE9051 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23E693692207318700AE9051 /* Cell.h */,
+				23E6936A2207318700AE9051 /* Cell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		23E6936D2207319700AE9051 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23E6936C2207318E00AE9051 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23E69376220752D700AE9051 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				23E69373220752D100AE9051 /* NSString+extention.h */,
+				23E69374220752D100AE9051 /* NSString+extention.m */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		23E6937A2207557D00AE9051 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				23E693772207542600AE9051 /* UITextField+extention.h */,
+				23E693782207542600AE9051 /* UITextField+extention.m */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		23E6937E2207624100AE9051 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				23E6937B2207620F00AE9051 /* StringKeys.h */,
+				23E6937C2207620F00AE9051 /* StringKeys.m */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		23E6937F220781EA00AE9051 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23895D76220460C200D7DC30 /* Utils.h */,
+				23895D77220460C200D7DC30 /* Utils.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		23EA58FC2203E0CC006FC87F /* Parse */ = {
@@ -353,8 +431,6 @@
 			children = (
 				23EA58FE2203E4E1006FC87F /* Formatter.h */,
 				23EA58FF2203E4E1006FC87F /* Formatter.m */,
-				23895D76220460C200D7DC30 /* Utils.h */,
-				23895D77220460C200D7DC30 /* Utils.m */,
 			);
 			path = Format;
 			sourceTree = "<group>";
@@ -482,6 +558,7 @@
 				23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */,
 				23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */,
 				23D807842202D318008F6F39 /* NewsCell.xib in Resources */,
+				23E6936822072FB100AE9051 /* AddSourseCell.xib in Resources */,
 				23D8076D2202A2F0008F6F39 /* FeedViewController.xib in Resources */,
 				23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */,
 				23895D722204406B00D7DC30 /* ButtonCell.xib in Resources */,
@@ -520,6 +597,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E69375220752D100AE9051 /* NSString+extention.m in Sources */,
+				23E6936722072FB100AE9051 /* AddSourseCell.m in Sources */,
 				23D768D92206CA3A00104257 /* SourceHeaderView.m in Sources */,
 				23EA591A22043DB6006FC87F /* DescriptionCell.m in Sources */,
 				23776A312205F10500099CB3 /* ListViewController+TableView.m in Sources */,
@@ -533,7 +612,9 @@
 				23776A3E2206C55A00099CB3 /* SourceCell.m in Sources */,
 				23EA590A220434B8006FC87F /* DetailViewController+TableView.m in Sources */,
 				23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */,
+				23E693792207542600AE9051 /* UITextField+extention.m in Sources */,
 				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
+				23E6936B2207318700AE9051 /* Cell.m in Sources */,
 				23EA590F22043C47006FC87F /* TitleCell.m in Sources */,
 				23776A352206B97000099CB3 /* Source.m in Sources */,
 				23EA59002203E4E1006FC87F /* Formatter.m in Sources */,
@@ -542,6 +623,7 @@
 				23895D7C22055ECD00D7DC30 /* UIView+loadFromNib.m in Sources */,
 				23D807632202A01A008F6F39 /* main.m in Sources */,
 				23D807832202D318008F6F39 /* NewsCell.m in Sources */,
+				23E6937D2207620F00AE9051 /* StringKeys.m in Sources */,
 				23EA59052204342C006FC87F /* DetailViewController.m in Sources */,
 				23895D6C22043FB400D7DC30 /* DateCell.m in Sources */,
 				23D8076C2202A2F0008F6F39 /* FeedViewController.m in Sources */,

@@ -40,7 +40,7 @@
     mainController.leftViewController = [self wrapListToNavigationController:controller];
     mainController.leftViewWidth = mainController.view.bounds.size.width * 0.80;
     mainController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
-    mainController.leftViewBackgroundColor = [UIColor colorWithRed:0.5 green:0.65 blue:0.5 alpha:0.95];
+    mainController.leftViewBackgroundColor = [UIColor colorWithRed:0.5 green:0.65 blue:0.5 alpha:1.0];
     mainController.rootViewCoverColorForLeftView = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.05];
     return mainController;
 }

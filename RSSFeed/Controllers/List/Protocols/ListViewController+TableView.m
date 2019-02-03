@@ -14,52 +14,81 @@
 #import "UIView+loadFromNib.h"
 #import "SourceHeaderView.h"
 #import "SourceCell.h"
+#import "AddSourseCell.h"
 #import "Source.h"
 #import "RealmManager.h"
 
 @implementation ListViewController (TableView)
 
 - (void)setupTableView {
-    [self.tableView registerNibFromClass:[SourceCell class]];
+    [self.tableView registerNibFromArrayClass:@[[SourceCell class],
+                                                [AddSourseCell class]]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [self getDate];
+    [self getData];
     self.isReadAll = false;
     self.isSelectAll = false;
 }
 
-- (void)getDate {
+- (void)getData {
     RLMResults *result = [Source allObjects];
-    NSMutableArray *array = [NSMutableArray new];
+    NSMutableArray *tempArray = [NSMutableArray new];
+    NSMutableArray *tempArray2 = [NSMutableArray new];
     for (Source *source in result) {
-        [array addObject:source];
+        [tempArray addObject:source];
     }
-    self.sourceArray = array;
+    for (Source *source in tempArray) {
+        [tempArray2 insertObject:source atIndex:0];
+    }
+    self.sourceArray = tempArray2;
 }
 
 @end
 
 @interface ListViewController (TableViewDataSource) <UITableViewDataSource>
 
-typedef enum : NSInteger {
-    ReadType,
-    UnreadType,
-    HeaderCount
-} HeaderType;
-
 @end
 
 @implementation ListViewController (TableViewDataSource)
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return SectionCount;
+}
+
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sourceArray.count;
+    switch (section) {
+        case AddType:
+            if (self.isAdd) {
+                return 1;
+            } else {
+                return 0;
+            }
+        case SourceType:
+            return self.sourceArray.count;
+        default:
+            return 0;
+    }
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    SourceCell *cell = [tableView dequeueReusableCellWithClass:[SourceCell class] forIndexPath:indexPath];
-    cell.source = self.sourceArray[indexPath.row];
-    cell.isEditing = self.isEditing;
-    [cell config];
-    return cell;
+    switch (indexPath.section) {
+        case AddType:
+        {
+            AddSourseCell *cell = [tableView dequeueReusableCellWithClass:[AddSourseCell class] forIndexPath:indexPath];
+            cell.delegate = (id<AddSourseCellDelegate>)self;
+            [cell config];
+            return cell;
+        }
+        case SourceType:
+        {
+            SourceCell *cell = [tableView dequeueReusableCellWithClass:[SourceCell class] forIndexPath:indexPath];
+            cell.source = self.sourceArray[indexPath.row];
+            cell.isEditing = self.isEditing;
+            [cell config];
+            return cell;
+        }
+        default:
+            return [UITableViewCell new];
+    }
 }
 
 @end
@@ -70,13 +99,15 @@ typedef enum : NSInteger {
 @implementation ListViewController (TableViewDelegate)
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.isEditing) {
-        [RealmManager updateSelectFor:self.sourceArray[indexPath.row].sourceId];
-    } else {
-        [RealmManager updateReadFor:self.sourceArray[indexPath.row].sourceId];
-        [self getDate];
+    if (!self.isAdd) {
+        if (self.isEditing) {
+            [RealmManager updateSelectFor:self.sourceArray[indexPath.row].sourceId];
+        } else {
+            [RealmManager updateReadFor:self.sourceArray[indexPath.row].sourceId];
+            [self getData];
+        }
+        [tableView reloadData];
     }
-    [tableView reloadData];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -92,15 +123,35 @@ typedef enum : NSInteger {
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
-    return 44.0;
+    switch (section) {
+        case SourceType:
+            if (!self.isAdd) {
+                return 44.0;
+            } else {
+                return 0;
+            }
+        default:
+            return 0;
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    SourceHeaderView *view = (SourceHeaderView *)[SourceHeaderView loadFromNib];
-    view.delegate = (id<SourceHeaderViewDelegate>)self;
-    view.isEditing = self.isEditing;
-    [view config];
-    return view;
+    switch (section) {
+        case SourceType:
+        {
+            if (!self.isAdd) {
+                SourceHeaderView *view = (SourceHeaderView *)[SourceHeaderView loadFromNib];
+                view.delegate = (id<SourceHeaderViewDelegate>)self;
+                view.isEditing = self.isEditing;
+                [view config];
+                return view;
+            } else {
+                return nil;
+            }
+        }
+        default:
+            return nil;
+    }
 }
 
 @end
@@ -112,13 +163,13 @@ typedef enum : NSInteger {
 
 - (void)readAll {
     self.isReadAll = [RealmManager updateReadAll:self.isReadAll];
-    [self getDate];
+    [self getData];
     [self.tableView reloadData];
 }
 
 - (void)selectAll {
     self.isSelectAll = [RealmManager updateSelectAll:self.isSelectAll];
-    [self getDate];
+    [self getData];
     [self.tableView reloadData];
 }
 
@@ -132,7 +183,27 @@ typedef enum : NSInteger {
 - (void)didHideLeftView:(UIView *)leftView sideMenuController:(LGSideMenuController *)sideMenuController {
     [RealmManager unselectAll];
     [self setupNavBar];
-    [self getDate];
+    [self getData];
+    [self.tableView reloadData];
+}
+
+@end
+
+@interface ListViewController (AddSourseCellDelegate) <AddSourseCellDelegate>
+@end
+
+@implementation ListViewController (AddSourseCellDelegate)
+
+- (void)addSource:(Source *)source {
+    self.isAdd = false;
+    [self.view endEditing:true];
+    [RealmManager saveSource:source];;
+    [UIView animateWithDuration:0 animations:^{
+        [self setupNavBar];
+        [self getData];
+    } completion:^(BOOL finished) {
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:SourceType] withRowAnimation:UITableViewRowAnimationNone];
+    }];
     [self.tableView reloadData];
 }
 

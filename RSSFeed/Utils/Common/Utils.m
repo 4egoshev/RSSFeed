@@ -9,8 +9,16 @@
 #import "Utils.h"
 #import "Formatter.h"
 #import "News.h"
+#import "StringKeys.h"
 
 @implementation Utils
+
++ (NSInteger)getSourceId {
+    NSInteger sourceId = [[NSUserDefaults standardUserDefaults] integerForKey:[StringKeys sourceIdKey]];
+    sourceId++;
+    [[NSUserDefaults standardUserDefaults] setInteger:sourceId forKey:[StringKeys sourceIdKey]];
+    return sourceId;
+}
 
 + (NSArray *)sortNews:(NSArray<News*> *)news {
     NSMutableArray *newsArray = [NSMutableArray new];

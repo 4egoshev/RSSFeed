@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSInteger {
+    AddType,
+    SourceType,
+    SectionCount
+} SectionType;
+
 @class Source;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -20,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) BOOL isEditing;
 @property (assign, nonatomic) BOOL isReadAll;
 @property (assign, nonatomic) BOOL isSelectAll;
+@property (assign, nonatomic) BOOL isAdd;
 
 - (void)setupNavBar;
 
