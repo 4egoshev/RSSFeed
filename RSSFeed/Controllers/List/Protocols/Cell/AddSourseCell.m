@@ -41,7 +41,24 @@
 }
 
 - (void)addAction:(id)sender {
-    [_delegate addSource:source];
+    if ([nameField.text isEmpty]) {
+        [nameField redPlaceholder];
+        [nameField becomeFirstResponder];
+    } else if ([urlField.text isEmpty]) {
+        [urlField redPlaceholder];
+        if ([nameField.text isEmpty]) {
+            [nameField redPlaceholder];
+            [nameField becomeFirstResponder];
+        } else {
+            [urlField becomeFirstResponder];
+        }
+    } else {
+        NSInteger sourceId = [[NSUserDefaults standardUserDefaults] integerForKey:[StringKeys sourceIdKey]];
+        sourceId++;
+        [[NSUserDefaults standardUserDefaults] setInteger:sourceId forKey:[StringKeys sourceIdKey]];
+        source.sourceId = sourceId;
+        [_delegate addSource:source];
+    }
 }
 
 @end

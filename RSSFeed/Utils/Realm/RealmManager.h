@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)createDefaultSource;
 
++ (NSArray *)getSources;
+
++ (void)deleteSources;
+
 + (void)saveSource:(Source *)source;
 
 + (void)updateReadFor:(NSInteger)sourceId;

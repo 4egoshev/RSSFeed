@@ -55,13 +55,34 @@
     }
 }
 
-#pragma mark - Save & Delete
+#pragma mark - Get, Save & Delete
+
++ (NSArray *)getSources {
+    RLMResults *result = [Source allObjects];
+    NSMutableArray *array = [NSMutableArray new];
+    for (Source *source in result) {
+        [array insertObject:source atIndex:0];
+    }
+    return array;
+}
 
 + (void)saveSource:(Source *)source {
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm transactionWithBlock:^{
         [realm addOrUpdateObject:source];
     }];
+}
+
++ (void)deleteSources {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    NSArray *array = [self getSources];
+    for (Source *source in array) {
+        if (source.isSelect) {
+            [realm deleteObject:source];
+        }
+    }
+    [realm commitWriteTransaction];
 }
 
 #pragma mark - Read & Select

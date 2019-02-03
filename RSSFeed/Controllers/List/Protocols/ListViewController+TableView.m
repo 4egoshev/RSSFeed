@@ -24,22 +24,9 @@
     [self.tableView registerNibFromArrayClass:@[[SourceCell class],
                                                 [AddSourseCell class]]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [self getData];
+    self.sourceArray = [RealmManager getSources];
     self.isReadAll = false;
     self.isSelectAll = false;
-}
-
-- (void)getData {
-    RLMResults *result = [Source allObjects];
-    NSMutableArray *tempArray = [NSMutableArray new];
-    NSMutableArray *tempArray2 = [NSMutableArray new];
-    for (Source *source in result) {
-        [tempArray addObject:source];
-    }
-    for (Source *source in tempArray) {
-        [tempArray2 insertObject:source atIndex:0];
-    }
-    self.sourceArray = tempArray2;
 }
 
 @end
@@ -104,7 +91,7 @@
             [RealmManager updateSelectFor:self.sourceArray[indexPath.row].sourceId];
         } else {
             [RealmManager updateReadFor:self.sourceArray[indexPath.row].sourceId];
-            [self getData];
+            self.sourceArray = [RealmManager getSources];
         }
         [tableView reloadData];
     }
@@ -163,13 +150,13 @@
 
 - (void)readAll {
     self.isReadAll = [RealmManager updateReadAll:self.isReadAll];
-    [self getData];
+    self.sourceArray = [RealmManager getSources];
     [self.tableView reloadData];
 }
 
 - (void)selectAll {
     self.isSelectAll = [RealmManager updateSelectAll:self.isSelectAll];
-    [self getData];
+    self.sourceArray = [RealmManager getSources];
     [self.tableView reloadData];
 }
 
@@ -183,7 +170,7 @@
 - (void)didHideLeftView:(UIView *)leftView sideMenuController:(LGSideMenuController *)sideMenuController {
     [RealmManager unselectAll];
     [self setupNavBar];
-    [self getData];
+    self.sourceArray = [RealmManager getSources];
     [self.tableView reloadData];
 }
 
@@ -200,7 +187,7 @@
     [RealmManager saveSource:source];;
     [UIView animateWithDuration:0 animations:^{
         [self setupNavBar];
-        [self getData];
+        self.sourceArray = [RealmManager getSources];
     } completion:^(BOOL finished) {
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:SourceType] withRowAnimation:UITableViewRowAnimationNone];
     }];

@@ -63,17 +63,14 @@
 }
 
 - (void)deletAction:(id)sender {
+    [RealmManager deleteSources];
+    self.sourceArray = [RealmManager getSources];
+    [self.tableView reloadData];
     
 }
 
 - (void)dismissKeyboard {
     [self.view endEditing:true];
-//    [self.tableView removeGestureRecognizer:tap];
 }
-
-//- (void)addTapGesture {
-//    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-//    [self.tableView addGestureRecognizer:tap];
-//}
 
 @end
