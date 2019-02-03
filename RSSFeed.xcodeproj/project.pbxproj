@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23776A292205EBA500099CB3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A272205EBA500099CB3 /* ListViewController.m */; };
+		23776A2A2205EBA500099CB3 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23776A282205EBA500099CB3 /* ListViewController.xib */; };
+		23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A2D2205EF8800099CB3 /* ListNavigationViewController.m */; };
+		23776A312205F10500099CB3 /* ListViewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A302205F10500099CB3 /* ListViewController+TableView.m */; };
 		23895D6C22043FB400D7DC30 /* DateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6A22043FB400D7DC30 /* DateCell.m */; };
 		23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D6B22043FB400D7DC30 /* DateCell.xib */; };
 		23895D712204406B00D7DC30 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6F2204406B00D7DC30 /* ButtonCell.m */; };
@@ -42,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23776A262205EBA500099CB3 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		23776A272205EBA500099CB3 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		23776A282205EBA500099CB3 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		23776A2C2205EF8800099CB3 /* ListNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNavigationViewController.h; sourceTree = "<group>"; };
+		23776A2D2205EF8800099CB3 /* ListNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListNavigationViewController.m; sourceTree = "<group>"; };
+		23776A2F2205F10500099CB3 /* ListViewController+TableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListViewController+TableView.h"; sourceTree = "<group>"; };
+		23776A302205F10500099CB3 /* ListViewController+TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ListViewController+TableView.m"; sourceTree = "<group>"; };
 		23895D6922043FB400D7DC30 /* DateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCell.h; sourceTree = "<group>"; };
 		23895D6A22043FB400D7DC30 /* DateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCell.m; sourceTree = "<group>"; };
 		23895D6B22043FB400D7DC30 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
@@ -111,6 +122,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23776A2B2205EBAD00099CB3 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				23776A322205F10C00099CB3 /* Protocols */,
+				23776A2C2205EF8800099CB3 /* ListNavigationViewController.h */,
+				23776A2D2205EF8800099CB3 /* ListNavigationViewController.m */,
+				23776A262205EBA500099CB3 /* ListViewController.h */,
+				23776A272205EBA500099CB3 /* ListViewController.m */,
+				23776A282205EBA500099CB3 /* ListViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		23776A322205F10C00099CB3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				23776A2F2205F10500099CB3 /* ListViewController+TableView.h */,
+				23776A302205F10500099CB3 /* ListViewController+TableView.m */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		23895D7922055EA000D7DC30 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				23D8076F2202A400008F6F39 /* Feed */,
+				23776A2B2205EBAD00099CB3 /* List */,
 				23EA590722043435006FC87F /* Detail */,
 			);
 			path = Controllers;
@@ -393,6 +427,7 @@
 			files = (
 				23EA591B22043DB6006FC87F /* DescriptionCell.xib in Resources */,
 				23D807602202A01A008F6F39 /* LaunchScreen.storyboard in Resources */,
+				23776A2A2205EBA500099CB3 /* ListViewController.xib in Resources */,
 				23EA59062204342C006FC87F /* DetailViewController.xib in Resources */,
 				23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */,
 				23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */,
@@ -434,7 +469,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EA591A22043DB6006FC87F /* DescriptionCell.m in Sources */,
+				23776A312205F10500099CB3 /* ListViewController+TableView.m in Sources */,
 				23895D712204406B00D7DC30 /* ButtonCell.m in Sources */,
+				23776A292205EBA500099CB3 /* ListViewController.m in Sources */,
 				23D807892202D566008F6F39 /* UITableView+registerNib.m in Sources */,
 				23EA58FB2203C368006FC87F /* News.m in Sources */,
 				23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */,
@@ -444,6 +481,7 @@
 				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
 				23EA590F22043C47006FC87F /* TitleCell.m in Sources */,
 				23EA59002203E4E1006FC87F /* Formatter.m in Sources */,
+				23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */,
 				23895D78220460C200D7DC30 /* Utils.m in Sources */,
 				23895D7C22055ECD00D7DC30 /* UIView+loadFromNib.m in Sources */,
 				23D807632202A01A008F6F39 /* main.m in Sources */,

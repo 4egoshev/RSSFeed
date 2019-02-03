@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ScreenFactory : NSObject
 
-+ (LGSideMenuController *)listViewController;
++ (LGSideMenuController *)mainViewController;
 
 + (UIViewController *)feedViewController;
 

@@ -54,7 +54,7 @@
 @implementation FeedViewController (TableViewDelegate)
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    [tableView deselectRowAtIndexPath:indexPath animated:false];
     [ScreenManager pushDetailViewContrller:self.newsArray[indexPath.section][indexPath.row]];
 }
 

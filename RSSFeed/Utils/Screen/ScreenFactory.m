@@ -12,6 +12,8 @@
 
 #import "ScreenFactory.h"
 #import "FeedViewController.h"
+#import "ListNavigationViewController.h"
+#import "ListViewController.h"
 #import "DetailViewController.h"
 #import "News.h"
 
@@ -19,15 +21,16 @@
 
 + (UINavigationController *)wrapToNavigationController:(UIViewController *)controller {
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    navController.modalPresentationCapturesStatusBarAppearance = true;
     return navController;
 }
 
 #pragma mark - Controllers
 
-+ (LGSideMenuController *)listViewController {
++ (LGSideMenuController *)mainViewController {
     LGSideMenuController *mainController = [[LGSideMenuController alloc] initWithRootViewController:[self feedViewController]];
     mainController.rootViewController = [self wrapToNavigationController:[self feedViewController]];
-    mainController.leftViewController = [UIViewController new];
+    mainController.leftViewController = [self listViewController];
     mainController.leftViewWidth = mainController.view.bounds.size.width * 0.80;
     mainController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
     mainController.leftViewBackgroundColor = [UIColor colorWithRed:0.5 green:0.65 blue:0.5 alpha:0.95];
@@ -38,6 +41,11 @@
 + (UIViewController *)feedViewController {
     FeedViewController *controller = [FeedViewController new];
     return controller;
+}
+
++ (UINavigationController *)listViewController {
+    ListNavigationViewController *navController = [[ListNavigationViewController alloc] initWithRootViewController:[ListViewController new]];
+    return navController;
 }
 
 + (UIViewController *)detailViewControllerWith:(News *)news {

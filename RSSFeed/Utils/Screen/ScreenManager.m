@@ -17,7 +17,7 @@
 @implementation ScreenManager
 
 + (void)configMainWindow:(UIWindow *)window {
-    window.rootViewController = (LGSideMenuController *)[ScreenFactory listViewController];
+    window.rootViewController = (LGSideMenuController *)[ScreenFactory mainViewController];
 }
 
 #pragma mark - Getters
