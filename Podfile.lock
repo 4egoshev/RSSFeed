@@ -1,0 +1,22 @@
+PODS:
+  - LGSideMenuController (2.1.1)
+  - Realm (3.11.1):
+    - Realm/Headers (= 3.11.1)
+  - Realm/Headers (3.11.1)
+
+DEPENDENCIES:
+  - LGSideMenuController
+  - Realm
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - LGSideMenuController
+    - Realm
+
+SPEC CHECKSUMS:
+  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
+  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
+
+PODFILE CHECKSUM: 884f32e874873a2907b3e00130c472f087c456da
+
+COCOAPODS: 1.5.3

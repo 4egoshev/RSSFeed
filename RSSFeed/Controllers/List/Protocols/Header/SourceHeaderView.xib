@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="SourceHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67Z-PM-MwR">
+                    <rect key="frame" x="16" y="8" width="30" height="28"/>
+                    <state key="normal" title="Все"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnt-LH-5je">
+                    <rect key="frame" x="329" y="8" width="30" height="28"/>
+                    <state key="normal" title="Все"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaG-OB-e1c">
+                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.2666666667" green="0.16862745100000001" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="yQm-i6-c1V"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.5018765926361084" green="0.64984792470932007" blue="0.5008845329284668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="67Z-PM-MwR" secondAttribute="bottom" constant="8" id="1iG-qU-Ywh"/>
+                <constraint firstAttribute="trailing" secondItem="qnt-LH-5je" secondAttribute="trailing" constant="16" id="3cG-Iw-ege"/>
+                <constraint firstItem="67Z-PM-MwR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="TVI-iR-Tp5"/>
+                <constraint firstItem="qnt-LH-5je" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="UdY-j6-qg0"/>
+                <constraint firstItem="67Z-PM-MwR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="YYw-ea-yqp"/>
+                <constraint firstAttribute="bottom" secondItem="BaG-OB-e1c" secondAttribute="bottom" id="afN-jy-bXv"/>
+                <constraint firstItem="BaG-OB-e1c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mbn-WD-QsC"/>
+                <constraint firstAttribute="trailing" secondItem="BaG-OB-e1c" secondAttribute="trailing" id="tys-nM-Dwd"/>
+                <constraint firstAttribute="bottom" secondItem="qnt-LH-5je" secondAttribute="bottom" constant="8" id="vHH-br-mHq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="readAllButton" destination="67Z-PM-MwR" id="AtZ-Nq-dkL"/>
+                <outlet property="selectAllButton" destination="qnt-LH-5je" id="bWV-Mz-9WN"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="130.43478260869566"/>
+        </view>
+    </objects>
+</document>

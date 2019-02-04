@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Utils : NSObject
 
++ (NSInteger)getSourceId;
+
 + (NSArray *)sortNews:(NSArray<News*> *)news;
 
 + (NSArray *)createDates:(NSArray<News*> *)news;

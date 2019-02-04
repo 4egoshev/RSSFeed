@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class LGSideMenuController;
 @class News;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ScreenFactory : NSObject
 
++ (LGSideMenuController *)mainViewController;
+
 + (UIViewController *)feedViewController;
+
 + (UIViewController *)detailViewControllerWith:(News *)news;
 
 @end

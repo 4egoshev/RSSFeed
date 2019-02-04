@@ -6,17 +6,15 @@
 //  Copyright © 2019 Александр Чегошев. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Cell.h"
 
 @class News;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewsCell : UITableViewCell
+@interface NewsCell : Cell
 
 @property (strong, nonatomic) News *news;
-
-- (void)config;
 
 @end
 

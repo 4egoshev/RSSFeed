@@ -8,11 +8,14 @@
 
 #import "FeedViewController.h"
 #import "FeedViewController+TableView.h"
+#import "UIViewController+LGSideMenuController.h"
 #import "XMLParseManager.h"
-
+#import "ScreenManager.h"
 #import "Utils.h"
+#import "RealmManager.h"
+#import "StringKeys.h"
 
-@interface FeedViewController () <XMLParseManagerDelegate>
+@interface FeedViewController ()
 
 @end
 
@@ -20,20 +23,48 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavBar];
+    [RealmManager createDefaultSource];
     [self setupTableView];
-    [self setupParser];
 }
 
-- (void)setupParser {
-    XMLParseManager *parser = [XMLParseManager manager];
-    [parser setDelegate:self];
-    [parser start];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self addObserver];
+    [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
 }
 
-- (void)updateNews:(NSArray *)news {
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self removeObserver];
+}
+
+- (void)setupNavBar {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list"] style:UIBarButtonItemStylePlain target:self action:@selector(listAction:)];
+}
+
+- (void)updateNews {
+    NSArray *news = [RealmManager getNews];
     self.newsArray = [Utils sortNews:news];
     self.dateArray = [Utils createDates:news];
     [self.tableView reloadData];
+}
+
+- (void)listAction:(id)sender {
+    [ScreenManager showList];
+}
+
+#pragma mark - Observer
+
+- (void)addObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateNews)
+                                                 name:[StringKeys kUpdateNewsNotification]
+                                               object:nil];
+}
+
+- (void)removeObserver {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

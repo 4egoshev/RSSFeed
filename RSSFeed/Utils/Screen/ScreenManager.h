@@ -15,7 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ScreenManager : NSObject
 
 + (void)configMainWindow:(UIWindow *)window;
+
 + (void)pushDetailViewContrller:(News *)news;
+
++ (void)showList;
 
 @end
 

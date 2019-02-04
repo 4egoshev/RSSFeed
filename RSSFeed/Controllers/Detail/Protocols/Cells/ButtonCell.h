@@ -6,10 +6,9 @@
 //  Copyright © 2019 Александр Чегошев. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Cell.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
 
 @class ButtonCell;
 
@@ -20,11 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ButtonCell : UITableViewCell
+@interface ButtonCell : Cell
 
 @property (weak, nonatomic) id<ButtonCellDelegate> delegate;
-
-- (void)config;
 
 @end
 

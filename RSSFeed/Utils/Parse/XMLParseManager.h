@@ -12,20 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class News;
 
-@protocol XMLParseManagerDelegate
-
-@required
-- (void)updateNews:(NSArray<News *> *)news;
-
-@end
-
 @interface XMLParseManager : NSObject
-
-@property (weak, nonatomic) id<XMLParseManagerDelegate> delegate;
 
 + (instancetype)manager;
 
-- (void)start;
+- (void)parseSources:(NSArray *)sources;
 
 @end
 
