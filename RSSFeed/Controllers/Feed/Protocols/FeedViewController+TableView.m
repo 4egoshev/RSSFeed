@@ -9,11 +9,15 @@
 #import "FeedViewController+TableView.h"
 #import "UITableView+registerNib.h"
 #import "UIView+loadFromNib.h"
-
+#import "NSArray+extention.h"
+#import "ListViewController.h"
+#import "XMLParseManager.h"
 #import "ScreenManager.h"
+#import "RealmManager.h"
 #import "NewsCell.h"
 #import "FeedHeaderView.h"
 #import "News.h"
+#import "Utils.h"
 
 
 @implementation FeedViewController (TableView)
@@ -21,6 +25,11 @@
 - (void)setupTableView {
     [self.tableView registerNibFromClass:[NewsCell class]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    NSArray *news = [RealmManager getNews];
+    if (!news.isEmpty) {
+        self.newsArray = [Utils sortNews:news];
+        self.dateArray = [Utils createDates:news];
+    }
 }
 
 @end
@@ -79,6 +88,25 @@
     view.date = self.dateArray[section];
     [view config];
     return view;
+}
+
+@end
+
+@interface FeedViewController (ListViewControllerDelegate) <ListViewControllerDelegate>
+@end
+
+@implementation FeedViewController (ListViewControllerDelegate)
+
+- (void)updateSource {
+    NSArray *array = [RealmManager getReadSources];
+    if (!array.isEmpty) {
+        [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+    } else {
+        [RealmManager deleteNews];
+        self.newsArray = nil;
+        self.dateArray = nil;
+        [self.tableView reloadData];
+    }
 }
 
 @end

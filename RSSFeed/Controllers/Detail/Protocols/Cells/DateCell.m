@@ -23,7 +23,8 @@
 }
 
 - (void)config {
-    dateLabel.text = [Formatter dateStringForFeed:self.news.date];
+    dateLabel.text = self.news.dateString;
+//    dateLabel.text = [Formatter dateStringForFeed:self.news.date];
 }
 
 @end

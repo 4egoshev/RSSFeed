@@ -7,22 +7,23 @@
 //
 
 #import "News.h"
-#import "Formatter.h"
+#import "StringKeys.h"
 
 @implementation News
 
--(void) setValue:(NSString *)value forProperty:(NSString *)property {
+-(void) setValue:(NSString *)value forProperty:(NSString *)property from:(NSString *)sourse {
+    _sourceName = sourse;
     if ([property isEqualToString:@"title"]) {
-        _title=value;
+        _title = value;
     }
     if ([property isEqualToString:@"link"]) {
-        _link=[NSURL URLWithString:value];
+        _linkString = value;
     }
     if ([property isEqualToString:@"description"]) {
-        _descript=value;
+        _descript = value;
     }
     if ([property isEqualToString:@"pubDate"]) {
-        _date = [Formatter dateFromString:value];
+        _dateString = value;
     }
 }
 

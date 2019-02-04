@@ -13,7 +13,13 @@
 + (NSDate *)dateFromString:(NSString *)string {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     dateFormat.locale = [NSLocale localeWithLocaleIdentifier:@"en_EN"];
+    NSDate *date = [NSDate date];
     [dateFormat setDateFormat:@"EE, d LLLL yyyy HH:mm:ss Z"];
+    date = [dateFormat dateFromString:string];
+    if (!date) {
+        [dateFormat setDateFormat:@"dd MMM yyyy HH:mm:ss Z"];
+        date = [dateFormat dateFromString:string];
+    }
     return [dateFormat dateFromString:string];
 }
 

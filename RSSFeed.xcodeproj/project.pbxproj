@@ -45,6 +45,7 @@
 		23E69375220752D100AE9051 /* NSString+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E69374220752D100AE9051 /* NSString+extention.m */; };
 		23E693792207542600AE9051 /* UITextField+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E693782207542600AE9051 /* UITextField+extention.m */; };
 		23E6937D2207620F00AE9051 /* StringKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6937C2207620F00AE9051 /* StringKeys.m */; };
+		23E693822208502100AE9051 /* NSArray+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E693812208502100AE9051 /* NSArray+extention.m */; };
 		23EA58FB2203C368006FC87F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FA2203C368006FC87F /* News.m */; };
 		23EA59002203E4E1006FC87F /* Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA58FF2203E4E1006FC87F /* Formatter.m */; };
 		23EA59052204342C006FC87F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA59032204342C006FC87F /* DetailViewController.m */; };
@@ -123,6 +124,8 @@
 		23E693782207542600AE9051 /* UITextField+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+extention.m"; sourceTree = "<group>"; };
 		23E6937B2207620F00AE9051 /* StringKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringKeys.h; sourceTree = "<group>"; };
 		23E6937C2207620F00AE9051 /* StringKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringKeys.m; sourceTree = "<group>"; };
+		23E693802208502100AE9051 /* NSArray+extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+extention.h"; sourceTree = "<group>"; };
+		23E693812208502100AE9051 /* NSArray+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+extention.m"; sourceTree = "<group>"; };
 		23EA58F92203C368006FC87F /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		23EA58FA2203C368006FC87F /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		23EA58FE2203E4E1006FC87F /* Formatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Formatter.h; sourceTree = "<group>"; };
@@ -324,6 +327,7 @@
 				23895D7D22055ED500D7DC30 /* View */,
 				23E69376220752D700AE9051 /* String */,
 				23E6937A2207557D00AE9051 /* TextField */,
+				23E693832208505900AE9051 /* Array */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -404,6 +408,15 @@
 				23895D77220460C200D7DC30 /* Utils.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		23E693832208505900AE9051 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				23E693802208502100AE9051 /* NSArray+extention.h */,
+				23E693812208502100AE9051 /* NSArray+extention.m */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 		23EA58FC2203E0CC006FC87F /* Parse */ = {
@@ -607,6 +620,7 @@
 				23776A292205EBA500099CB3 /* ListViewController.m in Sources */,
 				23D807892202D566008F6F39 /* UITableView+registerNib.m in Sources */,
 				23EA58FB2203C368006FC87F /* News.m in Sources */,
+				23E693822208502100AE9051 /* NSArray+extention.m in Sources */,
 				23895D862205606000D7DC30 /* FeedHeaderView.m in Sources */,
 				23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */,
 				23776A3E2206C55A00099CB3 /* SourceCell.m in Sources */,

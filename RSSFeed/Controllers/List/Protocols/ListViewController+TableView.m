@@ -17,6 +17,7 @@
 #import "AddSourseCell.h"
 #import "Source.h"
 #import "RealmManager.h"
+#import "StringKeys.h"
 
 @implementation ListViewController (TableView)
 
@@ -90,6 +91,10 @@
         if (self.isEditing) {
             [RealmManager updateSelectFor:self.sourceArray[indexPath.row].sourceId];
         } else {
+//            if (self.sourceArray[indexPath.row].isSelect) {
+//                [RealmManager deleteNews];
+//            }
+            [RealmManager deleteNews];
             [RealmManager updateReadFor:self.sourceArray[indexPath.row].sourceId];
             self.sourceArray = [RealmManager getSources];
         }
@@ -168,6 +173,7 @@
 @implementation ListViewController (LGSideMenuDelegate)
 
 - (void)didHideLeftView:(UIView *)leftView sideMenuController:(LGSideMenuController *)sideMenuController {
+    [self.delegate updateSource];
     [RealmManager unselectAll];
     [self setupNavBar];
     self.sourceArray = [RealmManager getSources];

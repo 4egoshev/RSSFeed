@@ -11,6 +11,7 @@
 #import "NSString+extention.h"
 #import "UITextField+extention.h"
 #import "StringKeys.h"
+#import "Utils.h"
 
 @interface AddSourseCell () {
     
@@ -53,9 +54,7 @@
             [urlField becomeFirstResponder];
         }
     } else {
-        NSInteger sourceId = [[NSUserDefaults standardUserDefaults] integerForKey:[StringKeys sourceIdKey]];
-        sourceId++;
-        [[NSUserDefaults standardUserDefaults] setInteger:sourceId forKey:[StringKeys sourceIdKey]];
+        NSInteger sourceId = [Utils getSourceId];
         source.sourceId = sourceId;
         [_delegate addSource:source];
     }
@@ -94,9 +93,7 @@
                 [urlField becomeFirstResponder];
             }
         } else {
-            NSInteger sourceId = [[NSUserDefaults standardUserDefaults] integerForKey:[StringKeys sourceIdKey]];
-            sourceId++;
-            [[NSUserDefaults standardUserDefaults] setInteger:sourceId forKey:[StringKeys sourceIdKey]];
+            NSInteger sourceId = [Utils getSourceId];
             source.sourceId = sourceId;
             [_delegate addSource:source];
         }

@@ -10,8 +10,16 @@
 
 @implementation StringKeys
 
-+ (NSString *)sourceIdKey {
-    return @"sourceIdKey";
++ (NSString *)kSourceId {
+    return @"kSourceId";
+}
+
++ (NSString *)kUpdateNewsNotification {
+    return @"kUpdateNews";
+}
+
++ (NSString *)sourceName {
+    return @"sourceName";
 }
 
 @end

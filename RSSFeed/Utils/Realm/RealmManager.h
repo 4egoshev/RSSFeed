@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray *)getSources;
 
++ (NSArray *)getReadSources;
+
 + (void)deleteSources;
 
 + (void)saveSource:(Source *)source;
@@ -31,6 +33,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)updateSelectAll:(BOOL)isSelect;
 
 + (void)unselectAll;
+
++ (NSArray *)getNews;
+
++ (void)saveNews:(NSArray *)news;
+
++ (void)deleteNews;
+
++ (void)deleteNewsFrom:(NSString *)source;
 
 @end
 

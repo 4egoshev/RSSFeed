@@ -1,5 +1,5 @@
 //
-//  StringKeys.h
+//  NSArray+extention.h
 //  RSSFeed
 //
 //  Created by Александр Чегошев on 04/02/2019.
@@ -10,13 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StringKeys : NSObject
+@interface NSArray (extention)
 
-+ (NSString *)kSourceId;
-
-+ (NSString *)kUpdateNewsNotification;
-
-+ (NSString *)sourceName;
+- (BOOL)isEmpty;
 
 @end
 

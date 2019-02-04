@@ -34,10 +34,11 @@
 
 + (LGSideMenuController *)mainViewController {
     LGSideMenuController *mainController = [[LGSideMenuController alloc] initWithRootViewController:[self feedViewController]];
-    ListViewController *controller = [ListViewController new];
-    mainController.delegate = (id<LGSideMenuDelegate>)controller;
-    mainController.rootViewController = [self wrapListToNavigationController:[self feedViewController]];
-    mainController.leftViewController = [self wrapListToNavigationController:controller];
+    FeedViewController *feedController = (FeedViewController *)[self feedViewController];
+    ListViewController *listontroller = (ListViewController *)[self listViewControllerWithDelegate:(id<ListViewControllerDelegate>)feedController];
+    mainController.delegate = (id<LGSideMenuDelegate>)listontroller;
+    mainController.rootViewController = [self wrapListToNavigationController:feedController];
+    mainController.leftViewController = [self wrapListToNavigationController:listontroller];
     mainController.leftViewWidth = mainController.view.bounds.size.width * 0.80;
     mainController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
     mainController.leftViewBackgroundColor = [UIColor colorWithRed:0.5 green:0.65 blue:0.5 alpha:1.0];
@@ -47,6 +48,12 @@
 
 + (UIViewController *)feedViewController {
     FeedViewController *controller = [FeedViewController new];
+    return controller;
+}
+
++ (UIViewController *)listViewControllerWithDelegate:(id<ListViewControllerDelegate>)delegate {
+    ListViewController *controller = [ListViewController new];
+    controller.delegate = delegate;
     return controller;
 }
 

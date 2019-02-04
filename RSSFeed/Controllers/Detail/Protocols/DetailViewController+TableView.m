@@ -95,7 +95,7 @@ typedef enum : NSInteger {
 @implementation DetailViewController (ButtonCellDelegate)
 
 - (void)openSafari {
-    [[UIApplication sharedApplication] openURL:self.news.link options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.news.linkString] options:@{} completionHandler:nil];
 }
 
 @end

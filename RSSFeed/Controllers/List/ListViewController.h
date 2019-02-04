@@ -14,13 +14,24 @@ typedef enum : NSInteger {
     SectionCount
 } SectionType;
 
+NS_ASSUME_NONNULL_BEGIN
+
+@class ListViewController;
 @class Source;
 
-NS_ASSUME_NONNULL_BEGIN
+@protocol ListViewControllerDelegate
+
+@required
+- (void)updateSource;
+
+@end
 
 @interface ListViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (weak, nonatomic) id<ListViewControllerDelegate> delegate;
+
 @property (strong, nonatomic) NSArray<Source*> *sourceArray;
 
 @property (assign, nonatomic) BOOL isEditing;

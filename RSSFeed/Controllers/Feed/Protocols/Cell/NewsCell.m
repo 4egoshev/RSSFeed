@@ -12,6 +12,7 @@
 
 @interface NewsCell () {
 
+    __weak IBOutlet UILabel *sourceNameLabel;
     __weak IBOutlet UILabel *titleLabel;
     __weak IBOutlet UILabel *descriptionLabel;
     __weak IBOutlet UILabel *dateLabel;
@@ -26,16 +27,19 @@
 }
 
 - (void)config {
+    sourceNameLabel.text = _news.sourceName;
     titleLabel.text = _news.title;
     descriptionLabel.text = _news.descript;
-    dateLabel.text = [Formatter dateStringForFeed:_news.date];
+    dateLabel.text = [Formatter dateStringForFeed:[Formatter dateFromString:_news.dateString]];
 }
 
 -(void)prepareForReuse{
     [super prepareForReuse];
-    titleLabel = nil;
-    descriptionLabel = nil;
-    dateLabel = nil;
+    
+    sourceNameLabel.text = nil;
+    titleLabel.text = nil;
+    descriptionLabel.text = nil;
+    dateLabel.text = nil;
 }
 
 @end
