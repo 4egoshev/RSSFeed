@@ -14,7 +14,18 @@
 - (void)grayBar {
     [self.navigationBar setBarTintColor:[UIColor navBarGrayColor]];
     [self.navigationBar setTintColor:[UIColor whiteColor]];
-    [self.navigationBar setTranslucent:NO];
+    [self.navigationBar setTranslucent:false];
+}
+
+- (void)blurBar {
+    [self.navigationBar setBarTintColor:[UIColor clearBlackColor]];
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationBar setTranslucent:true];
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *view = [[UIVisualEffectView alloc] initWithEffect:blur];
+    view.frame = self.navigationBar.bounds;
+    [self.navigationBar addSubview:view];
+    [self.navigationBar sendSubviewToBack:view];
 }
 
 @end

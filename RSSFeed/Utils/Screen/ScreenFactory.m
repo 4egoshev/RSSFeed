@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <LGSideMenuController/LGSideMenuController.h>
 #import <LGSideMenuController/UIViewController+LGSideMenuController.h>
-
+#import "UIColor+extention.h"
 #import "ScreenFactory.h"
 #import "FeedViewController.h"
 #import "ListNavigationViewController.h"
@@ -41,8 +41,7 @@
     mainController.leftViewController = [self wrapListToNavigationController:listontroller];
     mainController.leftViewWidth = mainController.view.bounds.size.width * 0.80;
     mainController.leftViewPresentationStyle = LGSideMenuPresentationStyleSlideAbove;
-    mainController.leftViewBackgroundColor = [UIColor colorWithRed:0.5 green:0.65 blue:0.5 alpha:1.0];
-    mainController.rootViewCoverColorForLeftView = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.05];
+    mainController.rootViewCoverColorForLeftView = [UIColor clearBlackColor];
     return mainController;
 }
 

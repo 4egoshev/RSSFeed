@@ -8,6 +8,8 @@
 
 #import "ListViewController.h"
 #import "ListViewController+TableView.h"
+#import "UINavigationController+extention.h"
+#import "UIColor+extention.h"
 #import "RealmManager.h"
 
 @interface ListViewController () {
@@ -25,6 +27,7 @@
 }
 
 - (void)setupNavBar {
+    [self.navigationController blurBar];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction:)];
     self.isEditing = false;
@@ -36,7 +39,9 @@
 - (void)editAction:(id)sender {
     self.isEditing = true;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deletAction:)];
+     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deletAction:)];
+    button.tintColor = [UIColor redLineColor];
+    self.navigationItem.rightBarButtonItem = button;
     [self.tableView reloadData];
 }
 

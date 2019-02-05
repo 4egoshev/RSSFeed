@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)grayBar;
 
+- (void)blurBar;
+
 @end
 
 NS_ASSUME_NONNULL_END

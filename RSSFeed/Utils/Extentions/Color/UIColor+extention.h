@@ -14,7 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)navBarGrayColor;
 
-+ (UIColor *)redLineColore;
++ (UIColor *)redLineColor;
+
++ (UIColor *)clearBlackColor;
+
++ (UIColor *)yellowCheckColor;
+
++ (UIColor *)grayCheckColor;
 
 @end
 

@@ -38,21 +38,11 @@
      
      CAShapeLayer *shapeLayer = [CAShapeLayer layer];
      [shapeLayer setPath:path];
-     [shapeLayer setFillColor:[[UIColor redLineColore] CGColor]];
+     [shapeLayer setFillColor:[[UIColor redLineColor] CGColor]];
      [shapeLayer setBounds:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
      [shapeLayer setAnchorPoint:CGPointMake(0.0, 0.0)];
      [shapeLayer setPosition:CGPointMake(0.0, 0.0)];
      [[self layer] addSublayer:shapeLayer];
-     
-//     CATextLayer* text = [CATextLayer new];
-//     if ([Utils isToday:_date]) {
-//         text.string = @"Сегодня";
-//     } else {
-//         text.string = [Formatter dateStrngForHaeder:_date];
-//     }
-//     text.font = CFBridgingRetain([UIFont systemFontOfSize:21.0]);
-//     text.fontSize=25;
-//     text.frame = CGRectMake(16,8,self.frame.size.width-60,self.frame.size.height-16);
      [shapeLayer addSublayer:text];
 }
 

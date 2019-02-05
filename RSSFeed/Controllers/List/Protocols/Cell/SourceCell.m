@@ -8,6 +8,7 @@
 
 #import "SourceCell.h"
 #import "Source.h"
+#import "UIColor+extention.h"
 
 @interface SourceCell () {
     
@@ -34,16 +35,20 @@
         [readCheckmarkView setHidden:true];
         if (_source.isSelect) {
             selectCheckmarkView.image = [UIImage imageNamed:@"selected"];
+            selectCheckmarkView.tintColor = [UIColor redLineColor];
         } else {
             selectCheckmarkView.image = [UIImage imageNamed:@"unselected"];
+            selectCheckmarkView.tintColor = [UIColor grayCheckColor];
         }
     } else {
         [selectCheckmarkView setHidden:true];
         [readCheckmarkView setHidden:false];
         if (_source.isRead) {
             readCheckmarkView.image = [UIImage imageNamed:@"checked"];
+            readCheckmarkView.tintColor = [UIColor yellowCheckColor];
         } else {
             readCheckmarkView.image = [UIImage imageNamed:@"unchecked"];
+            readCheckmarkView.tintColor = [UIColor grayCheckColor];
         }
     }
     [self updateConstraint];
