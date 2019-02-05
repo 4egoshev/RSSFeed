@@ -7,7 +7,6 @@
 //
 
 #import "SourceHeaderView.h"
-#import "UIView+loadFromNib.h"
 
 @interface SourceHeaderView () {
     

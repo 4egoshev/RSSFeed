@@ -7,7 +7,6 @@
 //
 
 #import "FeedHeaderView.h"
-#import "UIView+loadFromNib.h"
 #import "UIColor+extention.h"
 #import "Formatter.h"
 #import "Utils.h"

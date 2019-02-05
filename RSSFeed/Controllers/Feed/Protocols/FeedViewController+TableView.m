@@ -19,6 +19,7 @@
 #import "News.h"
 #import "Utils.h"
 #import "LoadingView.h"
+#import "ErrorView.h"
 
 
 @implementation FeedViewController (TableView)
@@ -104,7 +105,9 @@
         [UIView animateWithDuration:0 animations:^{
             self.navigationItem.titleView = [LoadingView loadFromNib];
         } completion:^(BOOL finished) {
-            [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+            [[XMLParseManager manager] parseSources:[RealmManager getReadSources] failure:^(NSString * error) {
+                [self showErrorView:error];
+            }];
         }];
     } else {
         [RealmManager deleteNews];
@@ -112,6 +115,24 @@
         self.dateArray = nil;
         [self.tableView reloadData];
     }
+}
+
+@end
+
+@interface FeedViewController (ErrorViewDelegate) <ErrorViewDelegate>
+@end
+
+@implementation FeedViewController (ErrorViewDelegate)
+
+- (void)repeat {
+    [UIView animateWithDuration:0 animations:^{
+        self.navigationItem.titleView = [LoadingView loadFromNib];
+        [self hideErrorView];
+    } completion:^(BOOL finished) {
+        [[XMLParseManager manager] parseSources:[RealmManager getReadSources] failure:^(NSString * error) {
+            [self showErrorView:error];
+        }];
+    }];
 }
 
 @end

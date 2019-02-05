@@ -35,14 +35,18 @@
     return manager;
 }
 
-- (void)parseSources:(NSArray *)sources {
+- (void)parseSources:(NSArray *)sources failure:(void (^ _Nullable )(NSString *))failure {
     newsArray = [NSMutableArray new];
     for (Source *source in sources) {
         isTitle = false;
         NSURL *url = [NSURL URLWithString:source.urlString];
         parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
         [parser setDelegate:self];
-        [parser parse];
+        BOOL parse = [parser parse];
+        if (!parse) {
+            NSLog(@"error = %@",parser.parserError.localizedDescription);
+            failure(parser.parserError.localizedDescription);
+        }
     }
 }
 

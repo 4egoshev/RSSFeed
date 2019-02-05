@@ -1,8 +1,8 @@
 //
-//  UIView+loadFromNib.h
+//  View.h
 //  RSSFeed
 //
-//  Created by Александр Чегошев on 02/02/2019.
+//  Created by Александр Чегошев on 05/02/2019.
 //  Copyright © 2019 Александр Чегошев. All rights reserved.
 //
 
@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (loadFromNib)
+@interface View : UIView
 
-+ (UIView *)loadFromNib;
+- (void)addToView:(UIView *)view;
+
+- (void)config;
 
 @end
 

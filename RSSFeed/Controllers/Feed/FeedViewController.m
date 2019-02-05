@@ -17,8 +17,12 @@
 #import "RealmManager.h"
 #import "StringKeys.h"
 #import "LoadingView.h"
+#import "ErrorView.h"
 
-@interface FeedViewController ()
+@interface FeedViewController () {
+    
+    BOOL isError;
+}
 
 @end
 
@@ -28,16 +32,19 @@
     [super viewDidLoad];
     [RealmManager createDefaultSource];
     [self setupNavBar];
+    [self setupErrorView];
     [self setupTableView];
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+        [[XMLParseManager manager] parseSources:[RealmManager getReadSources] failure:^(NSString * error) {
+            NSLog(@"1 = %@",error);
+            [self showErrorView:error];
+        }];
     }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self addObserver];
-    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -50,6 +57,12 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadNews:)];
     [self.navigationController grayBar];
     self.navigationItem.titleView = [LoadingView loadFromNib];
+}
+
+- (void)setupErrorView {
+    self.errorView = (ErrorView *)[ErrorView loadFromNib];
+    self.errorView.delegate = (id<ErrorViewDelegate>)self;
+    [self.errorView addToView:self.view];
 }
 
 - (void)updateNavBar {
@@ -80,6 +93,26 @@
     [self.tableView endUpdates];
 }
 
+- (void)showErrorView:(NSString *)error {
+    [self updateNavBar];
+    if (!isError) {
+        isError = true;
+        self.errorView.error = error;
+        [self.errorView config];
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.errorView setTransform:CGAffineTransformMakeTranslation(0, -self.errorView.frame.size.height)];
+        }];
+    }
+}
+- (void)hideErrorView {
+    isError = false;
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.errorView setTransform:CGAffineTransformMakeTranslation(0, self.errorView.frame.size.height)];
+    }];
+}
+
+#pragma mark - Action
+
 - (void)listAction:(id)sender {
     [ScreenManager showList];
 }
@@ -89,7 +122,9 @@
         self.navigationItem.title = nil;
         self.navigationItem.titleView = [LoadingView loadFromNib];
     } completion:^(BOOL finished) {
-        [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+        [[XMLParseManager manager] parseSources:[RealmManager getReadSources] failure:^(NSString * error) {
+            [self showErrorView:error];
+        }];
     }];
 }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Александр Чегошев. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "View.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface SourceHeaderView : UIView
+@interface SourceHeaderView : View
 
 @property (weak, nonatomic) id<SourceHeaderViewDelegate> delegate;
 
