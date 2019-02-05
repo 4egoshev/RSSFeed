@@ -31,6 +31,9 @@
     if (!news.isEmpty) {
         self.newsArray = [Utils sortNews:news];
         self.dateArray = [Utils createDates:news];
+    } else {
+        [self showPlaceholderIfNeed];
+        [self updateNavBar];
     }
 }
 
@@ -113,6 +116,8 @@
         [RealmManager deleteNews];
         self.newsArray = nil;
         self.dateArray = nil;
+        [self showPlaceholderIfNeed];
+        [self updateNavBar];
         [self.tableView reloadData];
     }
 }

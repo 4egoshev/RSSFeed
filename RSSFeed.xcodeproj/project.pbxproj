@@ -310,17 +310,12 @@
 		23D807522202A01A008F6F39 /* RSSFeed */ = {
 			isa = PBXGroup;
 			children = (
-				23D807532202A01A008F6F39 /* AppDelegate.h */,
-				23D807542202A01A008F6F39 /* AppDelegate.m */,
 				23E6936D2207319700AE9051 /* Views */,
 				23EA58FD2203E21F006FC87F /* Data */,
 				23D8078B2202D88D008F6F39 /* Utils */,
 				23D8076E2202A2F8008F6F39 /* Controllers */,
-				23D807592202A01A008F6F39 /* Main.storyboard */,
-				23D8075C2202A01A008F6F39 /* Assets.xcassets */,
-				23D8075E2202A01A008F6F39 /* LaunchScreen.storyboard */,
+				23F5A855220997DD00908201 /* Support */,
 				23D807612202A01A008F6F39 /* Info.plist */,
-				23D807622202A01A008F6F39 /* main.m */,
 			);
 			path = RSSFeed;
 			sourceTree = "<group>";
@@ -388,7 +383,6 @@
 				23EA59012203E64F006FC87F /* Format */,
 				23D8078F2202D97E008F6F39 /* Screen */,
 				23EA58FC2203E0CC006FC87F /* Parse */,
-				23D8078A2202D722008F6F39 /* Extentions */,
 				23D768E02206F06000104257 /* Realm */,
 				23E6937E2207624100AE9051 /* Key */,
 			);
@@ -447,6 +441,7 @@
 		23E6937E2207624100AE9051 /* Key */ = {
 			isa = PBXGroup;
 			children = (
+				23D8078A2202D722008F6F39 /* Extentions */,
 				23E6937B2207620F00AE9051 /* StringKeys.h */,
 				23E6937C2207620F00AE9051 /* StringKeys.m */,
 			);
@@ -557,6 +552,19 @@
 				23F5A852220978D600908201 /* View.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		23F5A855220997DD00908201 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				23D807532202A01A008F6F39 /* AppDelegate.h */,
+				23D807542202A01A008F6F39 /* AppDelegate.m */,
+				23D807622202A01A008F6F39 /* main.m */,
+				23D807592202A01A008F6F39 /* Main.storyboard */,
+				23D8075C2202A01A008F6F39 /* Assets.xcassets */,
+				23D8075E2202A01A008F6F39 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		2F1288A464981434C7EAF0D9 /* Frameworks */ = {

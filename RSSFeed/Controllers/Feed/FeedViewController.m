@@ -11,6 +11,7 @@
 #import "UIViewController+LGSideMenuController.h"
 #import "UINavigationController+extention.h"
 #import "UIView+loadFromNib.h"
+#import "NSArray+extention.h"
 #import "XMLParseManager.h"
 #import "ScreenManager.h"
 #import "Utils.h"
@@ -21,6 +22,7 @@
 
 @interface FeedViewController () {
     
+    __weak IBOutlet UIImageView *placeholderView;
     BOOL isError;
 }
 
@@ -83,6 +85,7 @@
     }
     self.newsArray = [Utils sortNews:news];
     self.dateArray = [Utils createDates:news];
+    [self showPlaceholderIfNeed];
     [self.tableView beginUpdates];
     NSIndexSet *index = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.dateArray.count)];
     if (isEmpty) {
@@ -109,6 +112,14 @@
     [UIView animateWithDuration:0.5 animations:^{
         [self.errorView setTransform:CGAffineTransformMakeTranslation(0, self.errorView.frame.size.height)];
     }];
+}
+
+- (void)showPlaceholderIfNeed {
+    if (self.newsArray.isEmpty || !self.newsArray) {
+        [placeholderView setHidden:false];
+    } else {
+        [placeholderView setHidden:true];
+    }
 }
 
 #pragma mark - Action

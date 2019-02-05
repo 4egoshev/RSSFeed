@@ -23,8 +23,12 @@
 @property (strong, nonatomic) NSArray *dateArray;
 @property (strong, nonatomic) NSArray<NSArray<News*>*> *newsArray;
 
+- (void)updateNavBar;
+
 - (void)showErrorView:(NSString *)error;
 
 - (void)hideErrorView;
+
+- (void)showPlaceholderIfNeed;
 
 @end
