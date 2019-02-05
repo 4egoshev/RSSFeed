@@ -9,6 +9,7 @@
 #import "NewsCell.h"
 #import "News.h"
 #import "Formatter.h"
+#import "UIColor+extention.h"
 
 @interface NewsCell () {
 
@@ -31,11 +32,17 @@
     titleLabel.text = _news.title;
     descriptionLabel.text = _news.descript;
     dateLabel.text = [Formatter dateStringForFeed:[Formatter dateFromString:_news.dateString]];
+    [self selectedColor];
+}
+
+- (void)selectedColor {
+    UIView *view = [[UIView alloc] initWithFrame:self.contentView.frame];
+    view.backgroundColor = [UIColor clearBlackColor];
+    [self setSelectedBackgroundView:view];
 }
 
 -(void)prepareForReuse{
     [super prepareForReuse];
-    
     sourceNameLabel.text = nil;
     titleLabel.text = nil;
     descriptionLabel.text = nil;

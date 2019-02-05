@@ -15,32 +15,38 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OS4-OX-1Yw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xak-Si-VgP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67Z-PM-MwR">
                     <rect key="frame" x="16" y="8" width="30" height="28"/>
-                    <state key="normal" title="Все"/>
+                    <state key="normal" title="Все">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnt-LH-5je">
                     <rect key="frame" x="329" y="8" width="30" height="28"/>
-                    <state key="normal" title="Все"/>
+                    <state key="normal" title="Все">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaG-OB-e1c">
-                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
-                    <color key="backgroundColor" red="0.2666666667" green="0.16862745100000001" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="yQm-i6-c1V"/>
-                    </constraints>
-                </view>
             </subviews>
-            <color key="backgroundColor" red="0.5018765926361084" green="0.64984792470932007" blue="0.5008845329284668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="67Z-PM-MwR" secondAttribute="bottom" constant="8" id="1iG-qU-Ywh"/>
                 <constraint firstAttribute="trailing" secondItem="qnt-LH-5je" secondAttribute="trailing" constant="16" id="3cG-Iw-ege"/>
+                <constraint firstItem="OS4-OX-1Yw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OrD-J3-d8C"/>
                 <constraint firstItem="67Z-PM-MwR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="TVI-iR-Tp5"/>
+                <constraint firstAttribute="bottom" secondItem="OS4-OX-1Yw" secondAttribute="bottom" id="UNF-Lf-0Fr"/>
                 <constraint firstItem="qnt-LH-5je" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="UdY-j6-qg0"/>
                 <constraint firstItem="67Z-PM-MwR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="YYw-ea-yqp"/>
-                <constraint firstAttribute="bottom" secondItem="BaG-OB-e1c" secondAttribute="bottom" id="afN-jy-bXv"/>
-                <constraint firstItem="BaG-OB-e1c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mbn-WD-QsC"/>
-                <constraint firstAttribute="trailing" secondItem="BaG-OB-e1c" secondAttribute="trailing" id="tys-nM-Dwd"/>
+                <constraint firstAttribute="trailing" secondItem="OS4-OX-1Yw" secondAttribute="trailing" id="hjR-z7-OPh"/>
+                <constraint firstItem="OS4-OX-1Yw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hqZ-u4-BnB"/>
                 <constraint firstAttribute="bottom" secondItem="qnt-LH-5je" secondAttribute="bottom" constant="8" id="vHH-br-mHq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

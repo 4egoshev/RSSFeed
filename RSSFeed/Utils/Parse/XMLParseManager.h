@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)manager;
 
-- (void)parseSources:(NSArray *)sources;
+- (void)parseSources:(NSArray *)sources failure:(void (^ _Nullable)(NSString *))failure;
 
 @end
 

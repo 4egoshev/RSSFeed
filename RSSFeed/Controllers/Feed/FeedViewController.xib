@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController">
             <connections>
+                <outlet property="placeholderView" destination="V9B-fI-BKk" id="Geu-aS-8as"/>
                 <outlet property="tableView" destination="EHg-Kh-7IS" id="gB1-uM-eQe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,21 +24,33 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EHg-Kh-7IS">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="ZqU-Ls-uco"/>
                         <outlet property="delegate" destination="-1" id="f73-uc-kz9"/>
                     </connections>
                 </tableView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placehoder_news" translatesAutoresizingMaskIntoConstraints="NO" id="V9B-fI-BKk">
+                    <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="V9B-fI-BKk" secondAttribute="height" multiplier="1:1" id="U0i-VV-3KP"/>
+                        <constraint firstAttribute="width" constant="200" id="nzp-cs-M8c"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.093697600066661835" green="0.10554011911153793" blue="0.12632593512535095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="EHg-Kh-7IS" secondAttribute="trailing" id="BBZ-uj-mvR"/>
                 <constraint firstItem="EHg-Kh-7IS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="JYp-bD-DwB"/>
                 <constraint firstItem="EHg-Kh-7IS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="caM-2n-z10"/>
+                <constraint firstItem="V9B-fI-BKk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="emf-gc-ulR"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="EHg-Kh-7IS" secondAttribute="bottom" id="hv4-wh-ZxQ"/>
+                <constraint firstItem="V9B-fI-BKk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ult-Ns-I5x"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>
+    <resources>
+        <image name="placehoder_news" width="100" height="100"/>
+    </resources>
 </document>

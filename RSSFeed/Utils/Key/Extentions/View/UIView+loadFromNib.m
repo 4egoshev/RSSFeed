@@ -14,7 +14,4 @@
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
 }
 
-- (void)config {
-}
-
 @end

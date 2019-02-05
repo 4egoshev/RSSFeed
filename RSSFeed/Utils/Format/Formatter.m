@@ -35,4 +35,11 @@
     return [formatter stringFromDate:date];
 }
 
++ (NSString *)dateStrngForDetail:(NSString *)string {
+    NSDate *date = [self dateFromString:string];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd MMMM yyyy"];
+    return [formatter stringFromDate:date];
+}
+
 @end

@@ -29,7 +29,7 @@
     }
     NSArray *datesArray = [dates sortedArrayUsingSelector: @selector(compare:)];
     dates = [NSMutableArray arrayWithArray:datesArray];
-
+    // создаем двумерный массив новостей
     NSArray *dayArray = [self daysArray:dates];
     for (NSDate *date in dayArray) {
         NSMutableArray *subNewsArray = [NSMutableArray new];
@@ -44,10 +44,10 @@
             }
         }
         NSArray *resultArray = [subNewsArray sortedArrayUsingComparator:^NSComparisonResult(News *first, News *second) {
-            NSDate *firstDare = [Formatter dateFromString:first.dateString];
+            NSDate *firstDate = [Formatter dateFromString:first.dateString];
             NSDate *secondDate = [Formatter dateFromString:second.dateString];
 
-            NSComparisonResult result =  [secondDate compare:firstDare];
+            NSComparisonResult result =  [secondDate compare:firstDate];
             return  result;
         }];
         [newsArray addObject:resultArray];
@@ -65,7 +65,11 @@
             [dateArray addObject:[Formatter dateFromString:item.dateString]];
         }
     }
-    return dateArray;
+    NSArray *resultArray = [dateArray sortedArrayUsingComparator:^NSComparisonResult(NSDate *first, NSDate *second) {
+        NSComparisonResult result =  [second compare:first];
+        return  result;
+    }];
+    return resultArray;
 }
 
 #pragma mark - Compare

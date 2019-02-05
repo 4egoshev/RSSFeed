@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSArray<Source*> *sourceArray;
 
+@property (assign, nonatomic) BOOL isChange;
 @property (assign, nonatomic) BOOL isEditing;
 @property (assign, nonatomic) BOOL isReadAll;
 @property (assign, nonatomic) BOOL isSelectAll;

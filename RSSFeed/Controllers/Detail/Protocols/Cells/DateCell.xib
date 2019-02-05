@@ -19,9 +19,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xi-Xc-RF4">
-                        <rect key="frame" x="16" y="0.0" width="288" height="35.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="16" y="16" width="288" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.6978076696395874" green="0.70172542333602905" blue="0.71824103593826294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -29,7 +29,7 @@
                     <constraint firstAttribute="bottom" secondItem="3xi-Xc-RF4" secondAttribute="bottom" constant="8" id="Z7u-hP-RRC"/>
                     <constraint firstItem="3xi-Xc-RF4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lau-M7-ynA"/>
                     <constraint firstAttribute="trailing" secondItem="3xi-Xc-RF4" secondAttribute="trailing" constant="16" id="ucE-ZE-rBh"/>
-                    <constraint firstItem="3xi-Xc-RF4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ynk-sd-wQN"/>
+                    <constraint firstItem="3xi-Xc-RF4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ynk-sd-wQN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

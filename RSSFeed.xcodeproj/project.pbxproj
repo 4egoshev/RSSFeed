@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230B67DB2208E4F900D7DCAA /* UINavigationController+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 230B67DA2208E4F900D7DCAA /* UINavigationController+extention.m */; };
+		230B67DF2208E56100D7DCAA /* UIColor+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 230B67DE2208E56100D7DCAA /* UIColor+extention.m */; };
+		230B67E32208E82800D7DCAA /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 230B67E22208E82800D7DCAA /* LoadingView.m */; };
+		230B67E62208E84900D7DCAA /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230B67E52208E84900D7DCAA /* LoadingView.xib */; };
 		23776A292205EBA500099CB3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A272205EBA500099CB3 /* ListViewController.m */; };
 		23776A2A2205EBA500099CB3 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23776A282205EBA500099CB3 /* ListViewController.xib */; };
 		23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A2D2205EF8800099CB3 /* ListNavigationViewController.m */; };
@@ -14,6 +18,8 @@
 		23776A352206B97000099CB3 /* Source.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A342206B97000099CB3 /* Source.m */; };
 		23776A3E2206C55A00099CB3 /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A3C2206C55A00099CB3 /* SourceCell.m */; };
 		23776A3F2206C55A00099CB3 /* SourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23776A3D2206C55A00099CB3 /* SourceCell.xib */; };
+		237B67D022094A30003BCFFA /* ErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 237B67CF22094A30003BCFFA /* ErrorView.m */; };
+		237B67D222095835003BCFFA /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 237B67D122095835003BCFFA /* ErrorView.xib */; };
 		23895D6C22043FB400D7DC30 /* DateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6A22043FB400D7DC30 /* DateCell.m */; };
 		23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23895D6B22043FB400D7DC30 /* DateCell.xib */; };
 		23895D712204406B00D7DC30 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23895D6F2204406B00D7DC30 /* ButtonCell.m */; };
@@ -55,10 +61,18 @@
 		23EA591022043C47006FC87F /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23EA590E22043C47006FC87F /* TitleCell.xib */; };
 		23EA591A22043DB6006FC87F /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA591822043DB6006FC87F /* DescriptionCell.m */; };
 		23EA591B22043DB6006FC87F /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23EA591922043DB6006FC87F /* DescriptionCell.xib */; };
+		23F5A853220978D600908201 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F5A852220978D600908201 /* View.m */; };
 		A6E9771A4F11AB38836034B1 /* libPods-RSSFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BC58230E682B79E754643E /* libPods-RSSFeed.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230B67D92208E4F900D7DCAA /* UINavigationController+extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+extention.h"; sourceTree = "<group>"; };
+		230B67DA2208E4F900D7DCAA /* UINavigationController+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+extention.m"; sourceTree = "<group>"; };
+		230B67DD2208E56100D7DCAA /* UIColor+extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+extention.h"; sourceTree = "<group>"; };
+		230B67DE2208E56100D7DCAA /* UIColor+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extention.m"; sourceTree = "<group>"; };
+		230B67E12208E82800D7DCAA /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		230B67E22208E82800D7DCAA /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		230B67E52208E84900D7DCAA /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		23776A262205EBA500099CB3 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		23776A272205EBA500099CB3 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		23776A282205EBA500099CB3 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
@@ -71,6 +85,9 @@
 		23776A3B2206C55A00099CB3 /* SourceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceCell.h; sourceTree = "<group>"; };
 		23776A3C2206C55A00099CB3 /* SourceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceCell.m; sourceTree = "<group>"; };
 		23776A3D2206C55A00099CB3 /* SourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceCell.xib; sourceTree = "<group>"; };
+		237B67CE22094A30003BCFFA /* ErrorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorView.h; sourceTree = "<group>"; };
+		237B67CF22094A30003BCFFA /* ErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorView.m; sourceTree = "<group>"; };
+		237B67D122095835003BCFFA /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		23895D6922043FB400D7DC30 /* DateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCell.h; sourceTree = "<group>"; };
 		23895D6A22043FB400D7DC30 /* DateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCell.m; sourceTree = "<group>"; };
 		23895D6B22043FB400D7DC30 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
@@ -141,6 +158,8 @@
 		23EA591722043DB6006FC87F /* DescriptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionCell.h; sourceTree = "<group>"; };
 		23EA591822043DB6006FC87F /* DescriptionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionCell.m; sourceTree = "<group>"; };
 		23EA591922043DB6006FC87F /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
+		23F5A851220978D600908201 /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		23F5A852220978D600908201 /* View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		2CE508338C1CFE780CB4EDD5 /* Pods-RSSFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeed/Pods-RSSFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		A74758A85F38A29B0BD86E20 /* Pods-RSSFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSFeed/Pods-RSSFeed.release.xcconfig"; sourceTree = "<group>"; };
 		C2BC58230E682B79E754643E /* libPods-RSSFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSSFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +177,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230B67DC2208E50700D7DCAA /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				230B67D92208E4F900D7DCAA /* UINavigationController+extention.h */,
+				230B67DA2208E4F900D7DCAA /* UINavigationController+extention.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		230B67E02208E56800D7DCAA /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				230B67DD2208E56100D7DCAA /* UIColor+extention.h */,
+				230B67DE2208E56100D7DCAA /* UIColor+extention.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		230B67E42208E82F00D7DCAA /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				230B67E12208E82800D7DCAA /* LoadingView.h */,
+				230B67E22208E82800D7DCAA /* LoadingView.m */,
+				230B67E52208E84900D7DCAA /* LoadingView.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		23776A2B2205EBAD00099CB3 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,17 +310,12 @@
 		23D807522202A01A008F6F39 /* RSSFeed */ = {
 			isa = PBXGroup;
 			children = (
-				23D807532202A01A008F6F39 /* AppDelegate.h */,
-				23D807542202A01A008F6F39 /* AppDelegate.m */,
-				23E6936D2207319700AE9051 /* View */,
+				23E6936D2207319700AE9051 /* Views */,
 				23EA58FD2203E21F006FC87F /* Data */,
 				23D8078B2202D88D008F6F39 /* Utils */,
 				23D8076E2202A2F8008F6F39 /* Controllers */,
-				23D807592202A01A008F6F39 /* Main.storyboard */,
-				23D8075C2202A01A008F6F39 /* Assets.xcassets */,
-				23D8075E2202A01A008F6F39 /* LaunchScreen.storyboard */,
+				23F5A855220997DD00908201 /* Support */,
 				23D807612202A01A008F6F39 /* Info.plist */,
-				23D807622202A01A008F6F39 /* main.m */,
 			);
 			path = RSSFeed;
 			sourceTree = "<group>";
@@ -328,6 +370,8 @@
 				23E69376220752D700AE9051 /* String */,
 				23E6937A2207557D00AE9051 /* TextField */,
 				23E693832208505900AE9051 /* Array */,
+				230B67DC2208E50700D7DCAA /* NavigationController */,
+				230B67E02208E56800D7DCAA /* Color */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -339,7 +383,6 @@
 				23EA59012203E64F006FC87F /* Format */,
 				23D8078F2202D97E008F6F39 /* Screen */,
 				23EA58FC2203E0CC006FC87F /* Parse */,
-				23D8078A2202D722008F6F39 /* Extentions */,
 				23D768E02206F06000104257 /* Realm */,
 				23E6937E2207624100AE9051 /* Key */,
 			);
@@ -366,12 +409,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		23E6936D2207319700AE9051 /* View */ = {
+		23E6936D2207319700AE9051 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23F5A8542209794700908201 /* View */,
 				23E6936C2207318E00AE9051 /* Cell */,
+				230B67E42208E82F00D7DCAA /* LoadingView */,
+				23F5A850220973A600908201 /* ErrorView */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		23E69376220752D700AE9051 /* String */ = {
@@ -395,6 +441,7 @@
 		23E6937E2207624100AE9051 /* Key */ = {
 			isa = PBXGroup;
 			children = (
+				23D8078A2202D722008F6F39 /* Extentions */,
 				23E6937B2207620F00AE9051 /* StringKeys.h */,
 				23E6937C2207620F00AE9051 /* StringKeys.m */,
 			);
@@ -488,6 +535,38 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		23F5A850220973A600908201 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				237B67CE22094A30003BCFFA /* ErrorView.h */,
+				237B67CF22094A30003BCFFA /* ErrorView.m */,
+				237B67D122095835003BCFFA /* ErrorView.xib */,
+			);
+			name = ErrorView;
+			sourceTree = "<group>";
+		};
+		23F5A8542209794700908201 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23F5A851220978D600908201 /* View.h */,
+				23F5A852220978D600908201 /* View.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23F5A855220997DD00908201 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				23D807532202A01A008F6F39 /* AppDelegate.h */,
+				23D807542202A01A008F6F39 /* AppDelegate.m */,
+				23D807622202A01A008F6F39 /* main.m */,
+				23D807592202A01A008F6F39 /* Main.storyboard */,
+				23D8075C2202A01A008F6F39 /* Assets.xcassets */,
+				23D8075E2202A01A008F6F39 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		2F1288A464981434C7EAF0D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,11 +647,13 @@
 				23D807602202A01A008F6F39 /* LaunchScreen.storyboard in Resources */,
 				23776A2A2205EBA500099CB3 /* ListViewController.xib in Resources */,
 				23EA59062204342C006FC87F /* DetailViewController.xib in Resources */,
+				237B67D222095835003BCFFA /* ErrorView.xib in Resources */,
 				23895D6D22043FB400D7DC30 /* DateCell.xib in Resources */,
 				23D8075D2202A01A008F6F39 /* Assets.xcassets in Resources */,
 				23D807842202D318008F6F39 /* NewsCell.xib in Resources */,
 				23E6936822072FB100AE9051 /* AddSourseCell.xib in Resources */,
 				23D8076D2202A2F0008F6F39 /* FeedViewController.xib in Resources */,
+				230B67E62208E84900D7DCAA /* LoadingView.xib in Resources */,
 				23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */,
 				23895D722204406B00D7DC30 /* ButtonCell.xib in Resources */,
 				23D768DB2206CA4900104257 /* SourceHeaderView.xib in Resources */,
@@ -616,6 +697,7 @@
 				23EA591A22043DB6006FC87F /* DescriptionCell.m in Sources */,
 				23776A312205F10500099CB3 /* ListViewController+TableView.m in Sources */,
 				23895D712204406B00D7DC30 /* ButtonCell.m in Sources */,
+				23F5A853220978D600908201 /* View.m in Sources */,
 				23E693632206F1E200AE9051 /* RealmManager.m in Sources */,
 				23776A292205EBA500099CB3 /* ListViewController.m in Sources */,
 				23D807892202D566008F6F39 /* UITableView+registerNib.m in Sources */,
@@ -625,6 +707,7 @@
 				23D807A12203B0E2008F6F39 /* XMLParseManager.m in Sources */,
 				23776A3E2206C55A00099CB3 /* SourceCell.m in Sources */,
 				23EA590A220434B8006FC87F /* DetailViewController+TableView.m in Sources */,
+				237B67D022094A30003BCFFA /* ErrorView.m in Sources */,
 				23D807922202DAD0008F6F39 /* ScreenFactory.m in Sources */,
 				23E693792207542600AE9051 /* UITextField+extention.m in Sources */,
 				23D8078E2202D977008F6F39 /* ScreenManager.m in Sources */,
@@ -632,7 +715,10 @@
 				23EA590F22043C47006FC87F /* TitleCell.m in Sources */,
 				23776A352206B97000099CB3 /* Source.m in Sources */,
 				23EA59002203E4E1006FC87F /* Formatter.m in Sources */,
+				230B67DB2208E4F900D7DCAA /* UINavigationController+extention.m in Sources */,
+				230B67DF2208E56100D7DCAA /* UIColor+extention.m in Sources */,
 				23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */,
+				230B67E32208E82800D7DCAA /* LoadingView.m in Sources */,
 				23895D78220460C200D7DC30 /* Utils.m in Sources */,
 				23895D7C22055ECD00D7DC30 /* UIView+loadFromNib.m in Sources */,
 				23D807632202A01A008F6F39 /* main.m in Sources */,

@@ -18,6 +18,8 @@
 #import "FeedHeaderView.h"
 #import "News.h"
 #import "Utils.h"
+#import "LoadingView.h"
+#import "ErrorView.h"
 
 
 @implementation FeedViewController (TableView)
@@ -29,6 +31,9 @@
     if (!news.isEmpty) {
         self.newsArray = [Utils sortNews:news];
         self.dateArray = [Utils createDates:news];
+    } else {
+        [self showPlaceholderIfNeed];
+        [self updateNavBar];
     }
 }
 
@@ -41,7 +46,7 @@
 @implementation FeedViewController (TableViewDataSource)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dateArray.count;
+    return self.newsArray.count;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -100,13 +105,39 @@
 - (void)updateSource {
     NSArray *array = [RealmManager getReadSources];
     if (!array.isEmpty) {
-        [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+        [UIView animateWithDuration:0 animations:^{
+            self.navigationItem.titleView = [LoadingView loadFromNib];
+        } completion:^(BOOL finished) {
+            [[XMLParseManager manager] parseSources:[RealmManager getReadSources] failure:^(NSString * error) {
+                [self showErrorView:error];
+            }];
+        }];
     } else {
         [RealmManager deleteNews];
         self.newsArray = nil;
         self.dateArray = nil;
+        [self showPlaceholderIfNeed];
+        [self updateNavBar];
         [self.tableView reloadData];
     }
+}
+
+@end
+
+@interface FeedViewController (ErrorViewDelegate) <ErrorViewDelegate>
+@end
+
+@implementation FeedViewController (ErrorViewDelegate)
+
+- (void)repeat {
+    [UIView animateWithDuration:0 animations:^{
+        self.navigationItem.titleView = [LoadingView loadFromNib];
+        [self hideErrorView];
+    } completion:^(BOOL finished) {
+        [[XMLParseManager manager] parseSources:[RealmManager getReadSources] failure:^(NSString * error) {
+            [self showErrorView:error];
+        }];
+    }];
 }
 
 @end

@@ -7,24 +7,42 @@
 //
 
 #import "FeedHeaderView.h"
-#import "UIView+loadFromNib.h"
+#import "UIColor+extention.h"
 #import "Formatter.h"
 #import "Utils.h"
-
-@interface FeedHeaderView () {
-    __weak IBOutlet UILabel *dayLabel;
-}
-
-@end
 
 @implementation FeedHeaderView
 
 - (void)config {
+    CATextLayer* text = [CATextLayer new];
+    text.font = CFBridgingRetain([UIFont systemFontOfSize:21.0]);
+    text.fontSize=25;
+    text.frame = CGRectMake(16,8,self.frame.size.width-60,self.frame.size.height-16);
+    
+    CGFloat width = 0;
     if ([Utils isToday:_date]) {
-        dayLabel.text = @"Сегодня";
+        text.string = @"Сегодня";
+        width = self.frame.size.width-230;
     } else {
-        dayLabel.text = [Formatter dateStrngForHaeder:_date];
+        text.string = [Formatter dateStrngForHaeder:_date];
+        width = self.frame.size.width-60;
     }
+    
+     CGMutablePathRef path = CGPathCreateMutable();
+     CGPathMoveToPoint(path,NULL,0.0,2.0);
+     CGPathAddLineToPoint(path, NULL, width, 2.0);
+     CGPathAddLineToPoint(path, NULL, width+20, self.frame.size.height);
+     CGPathAddLineToPoint(path, NULL, 0.0, self.frame.size.height);
+     CGPathAddLineToPoint(path, NULL, 0.0, 0.0);
+     
+     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+     [shapeLayer setPath:path];
+     [shapeLayer setFillColor:[[UIColor redLineColor] CGColor]];
+     [shapeLayer setBounds:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+     [shapeLayer setAnchorPoint:CGPointMake(0.0, 0.0)];
+     [shapeLayer setPosition:CGPointMake(0.0, 0.0)];
+     [[self layer] addSublayer:shapeLayer];
+     [shapeLayer addSublayer:text];
 }
 
 @end
