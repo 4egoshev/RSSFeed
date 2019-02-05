@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230B67DB2208E4F900D7DCAA /* UINavigationController+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 230B67DA2208E4F900D7DCAA /* UINavigationController+extention.m */; };
+		230B67DF2208E56100D7DCAA /* UIColor+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 230B67DE2208E56100D7DCAA /* UIColor+extention.m */; };
+		230B67E32208E82800D7DCAA /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 230B67E22208E82800D7DCAA /* LoadingView.m */; };
+		230B67E62208E84900D7DCAA /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230B67E52208E84900D7DCAA /* LoadingView.xib */; };
 		23776A292205EBA500099CB3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A272205EBA500099CB3 /* ListViewController.m */; };
 		23776A2A2205EBA500099CB3 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23776A282205EBA500099CB3 /* ListViewController.xib */; };
 		23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23776A2D2205EF8800099CB3 /* ListNavigationViewController.m */; };
@@ -59,6 +63,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230B67D92208E4F900D7DCAA /* UINavigationController+extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+extention.h"; sourceTree = "<group>"; };
+		230B67DA2208E4F900D7DCAA /* UINavigationController+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+extention.m"; sourceTree = "<group>"; };
+		230B67DD2208E56100D7DCAA /* UIColor+extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+extention.h"; sourceTree = "<group>"; };
+		230B67DE2208E56100D7DCAA /* UIColor+extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extention.m"; sourceTree = "<group>"; };
+		230B67E12208E82800D7DCAA /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		230B67E22208E82800D7DCAA /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		230B67E52208E84900D7DCAA /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		23776A262205EBA500099CB3 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		23776A272205EBA500099CB3 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		23776A282205EBA500099CB3 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +169,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230B67DC2208E50700D7DCAA /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				230B67D92208E4F900D7DCAA /* UINavigationController+extention.h */,
+				230B67DA2208E4F900D7DCAA /* UINavigationController+extention.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		230B67E02208E56800D7DCAA /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				230B67DD2208E56100D7DCAA /* UIColor+extention.h */,
+				230B67DE2208E56100D7DCAA /* UIColor+extention.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		230B67E42208E82F00D7DCAA /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				230B67E12208E82800D7DCAA /* LoadingView.h */,
+				230B67E22208E82800D7DCAA /* LoadingView.m */,
+				230B67E52208E84900D7DCAA /* LoadingView.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		23776A2B2205EBAD00099CB3 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +367,8 @@
 				23E69376220752D700AE9051 /* String */,
 				23E6937A2207557D00AE9051 /* TextField */,
 				23E693832208505900AE9051 /* Array */,
+				230B67DC2208E50700D7DCAA /* NavigationController */,
+				230B67E02208E56800D7DCAA /* Color */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -370,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				23E6936C2207318E00AE9051 /* Cell */,
+				230B67E42208E82F00D7DCAA /* LoadingView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -573,6 +615,7 @@
 				23D807842202D318008F6F39 /* NewsCell.xib in Resources */,
 				23E6936822072FB100AE9051 /* AddSourseCell.xib in Resources */,
 				23D8076D2202A2F0008F6F39 /* FeedViewController.xib in Resources */,
+				230B67E62208E84900D7DCAA /* LoadingView.xib in Resources */,
 				23895D832205602600D7DC30 /* FeedHeaderView.xib in Resources */,
 				23895D722204406B00D7DC30 /* ButtonCell.xib in Resources */,
 				23D768DB2206CA4900104257 /* SourceHeaderView.xib in Resources */,
@@ -632,7 +675,10 @@
 				23EA590F22043C47006FC87F /* TitleCell.m in Sources */,
 				23776A352206B97000099CB3 /* Source.m in Sources */,
 				23EA59002203E4E1006FC87F /* Formatter.m in Sources */,
+				230B67DB2208E4F900D7DCAA /* UINavigationController+extention.m in Sources */,
+				230B67DF2208E56100D7DCAA /* UIColor+extention.m in Sources */,
 				23776A2E2205EF8800099CB3 /* ListNavigationViewController.m in Sources */,
+				230B67E32208E82800D7DCAA /* LoadingView.m in Sources */,
 				23895D78220460C200D7DC30 /* Utils.m in Sources */,
 				23895D7C22055ECD00D7DC30 /* UIView+loadFromNib.m in Sources */,
 				23D807632202A01A008F6F39 /* main.m in Sources */,

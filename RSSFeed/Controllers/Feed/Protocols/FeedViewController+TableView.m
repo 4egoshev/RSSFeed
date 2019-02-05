@@ -18,6 +18,7 @@
 #import "FeedHeaderView.h"
 #import "News.h"
 #import "Utils.h"
+#import "LoadingView.h"
 
 
 @implementation FeedViewController (TableView)
@@ -41,7 +42,7 @@
 @implementation FeedViewController (TableViewDataSource)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dateArray.count;
+    return self.newsArray.count;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -100,7 +101,11 @@
 - (void)updateSource {
     NSArray *array = [RealmManager getReadSources];
     if (!array.isEmpty) {
-        [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+        [UIView animateWithDuration:0 animations:^{
+            self.navigationItem.titleView = [LoadingView loadFromNib];
+        } completion:^(BOOL finished) {
+            [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+        }];
     } else {
         [RealmManager deleteNews];
         self.newsArray = nil;
