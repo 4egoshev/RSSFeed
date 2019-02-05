@@ -26,15 +26,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
     [RealmManager createDefaultSource];
+    [self setupNavBar];
     [self setupTableView];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self addObserver];
-    [[XMLParseManager manager] parseSources:[RealmManager getReadSources]];
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

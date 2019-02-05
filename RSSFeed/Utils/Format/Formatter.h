@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)dateStrngForHaeder:(NSDate *)date;
 
++ (NSString *)dateStrngForDetail:(NSString *)string;
+
 @end
 
 NS_ASSUME_NONNULL_END
